@@ -16,7 +16,7 @@ As of 1242 AD only his demons stalk the island, guarding the ancestor tree, and 
 ## Notable
 ### Inhabitants
 
-### Creatures and Unnamed NPCs
+### Creatures and Unnamed merchants and scholars
 |+ The Obsidian Circle cultists found at the Ancestor Tree
 |50 px|link=The Obsidian Circle Fearmaiden<br />The Obsidian Circle Fearmaiden
 |2 / 15
@@ -38,6 +38,3 @@ As of 1242 AD only his demons stalk the island, guarding the ancestor tree, and 
 ## Experience
 
 ## Interactive Map
-
-Category:Original Sin 2 locations
-Category:Gallow Shore

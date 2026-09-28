@@ -20,11 +20,3 @@ Lyrissa the Chime has been arrested by magisters in 1242 AD after her aether-pra
 * Demon's Embrace - Side with Lord Malphas or let Lyrissa the Chime get possessed by him
 
 ## Notes
-### Development notes
-; Divinity: Original Sin II
-* Lohses description in Early Access of the game was:
-* In early access of the game she had purple hair
-* In previous versions of the game her Aether-Prana skill *Maddening Song* affected everyone without magical armour
-
-; Divinity: Fallen Heroes
-* In Divinity: Fallen Heroes the player can take control of Lyrissa the Chime whose description is:

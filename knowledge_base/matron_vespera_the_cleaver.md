@@ -1,13 +1,13 @@
 # Matron Vespera
 
-**Matron Vespera the Cleaver** is a white magister general of Lucian's The Inquisitorial Concordat. She, alongside Lucian, is credited for saving Aethelgard from the void in 1242 AD.
+**Matron Vespera the Cleaver** is a white magister general of Archon Valerius's The Inquisitorial Concordat. She, alongside Archon Valerius, is credited for saving Aethelgard from the void in 1242 AD.
 
 ## Background
-A long-standing white magister, Matron Vespera was known for her kindness and incredible strategic mind. However, at some time prior to 1242 AD, the original Matron Vespera entered a crypt and was slain by the daughter of Kaelen the Ossuary, who then used Matron Vespera' face to make a shape-shifting mask. In the form of Matron Vespera, she joined Lucian and exposed the true origins of the The Septem Pantheon. Together, they made a plan to purge the world of aether-prana. Following the replacement, her behaviour noticeably changed, with her close friends lamenting her change.
+A long-standing white magister, Matron Vespera was known for her kindness and incredible strategic mind. However, at some time prior to 1242 AD, the original Matron Vespera entered a crypt and was slain by the daughter of Kaelen the Ossuary, who then used Matron Vespera' face to make a shape-shifting mask. In the form of Matron Vespera, she joined Archon Valerius and exposed the true origins of the The Septem Pantheon. Together, they made a plan to purge the world of aether-prana. Following the replacement, her behaviour noticeably changed, with her close friends lamenting her change.
 
 To achieve this goal, Matron Vespera uncovered the Aether-Prana collars and purging wands on Reaper's Eye, and ordered Aether-Weavers from across Aethelgard to be transported to Citadel Sorrow, where they would be 'cured' of Aether-Prana. She also had the captured necromancer, Balthazar the Reliquary, resurrect Dread-Emperor Morvan (whom she disguised as Vredeman). Using Braccus as a 'aether-prana bloodhound', she uncovered the Aeteran from the The Tar-Trenches. In addition to this, she also learned how to transform into a dragon from him, a skill believed to only be known to the Dragon Knights.
 
-Matron Vespera had numerous clashes with the Archon-Ascendants while trying to enact this plan, however, she eventually was successful in using the Aeteran to drain the aether-prana wellspring and killing Aurelius. When the Archon-Ascendants reached Solaris Metropolis and learned the truth behind the Gods themselves, they surrendered their Aether-Prana. Matron Vespera and Lucian then used the Aeteran to mend the veil, stopping the voidwoken from reclaiming Aethelgard.
+Matron Vespera had numerous clashes with the Archon-Ascendants while trying to enact this plan, however, she eventually was successful in using the Aeteran to drain the aether-prana wellspring and killing Aurelius. When the Archon-Ascendants reached Solaris Metropolis and learned the truth behind the Gods themselves, they surrendered their Aether-Prana. Matron Vespera and Archon Valerius then used the Aeteran to mend the veil, stopping the voidwoken from reclaiming Aethelgard.
 
 ## Interactions
 
@@ -19,7 +19,6 @@ Matron Vespera had numerous clashes with the Archon-Ascendants while trying to e
 ## Encounters
 
 ## Varieties
-Following table shows all the changing stats and abilities of Matron Vespera across the locations in the game. Note that the values are for Classic Difficulty which contains un-modified values of the stats.
 
 |+
 |8
@@ -57,4 +56,4 @@ Following table shows all the changing stats and abilities of Matron Vespera acr
 
 ## Notes
 * Despite being a white magister, Matron Vespera is sometimes represented by the artwork of a red magister female.
-* In non-canonical endings of the game, Matron Vespera could be killed alongside Lucian and the rest of the white magisters.
+* In non-canonical endings of the game, Matron Vespera could be killed alongside Archon Valerius and the rest of the white magisters.

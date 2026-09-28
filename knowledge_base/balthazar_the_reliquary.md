@@ -9,7 +9,7 @@ After he was freed by the Archon-Ascendants he tried to restore the only weapon,
 
 Later on, he could turn his attention towards the realm of Nemesis.
 
-## Interactions with player character
+## Interactions with central historical figure
 
 ## Related quests
 * Lady o' War - While not directly part of the quest, he offers a hint for solving it.

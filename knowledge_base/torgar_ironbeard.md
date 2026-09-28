@@ -14,7 +14,6 @@ When *the Merryweather* is attacked by the voidwoken, Marcus manages to make it 
 
 ## Encounters
 ### Varieties
-Following table shows all the changing stats and abilities of Marcus across the locations in the game. Note that the values are for Classic Difficulty in Definitive Edition which contains un-modified values of the stats.
 
 |+
 |The Academy of the Seven / The Arena of the One
@@ -30,4 +29,3 @@ Following table shows all the changing stats and abilities of Marcus across the 
 |None
 
 ## Notes
-* Stats in infobox are based on Classic Difficulty in Definitive Edition of the game

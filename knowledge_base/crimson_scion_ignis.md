@@ -17,7 +17,6 @@ On Island of Reapers' Eye he can be found contemplating on cliff located on beac
 ## Encounters
 
 ### Varieties
-Following table shows all the changing stats and abilities of Crimson Scion Ignis across the locations in the game. Note that the values are for Classic Difficulty in Definitive Edition which contains un-modified values of the stats.
 
 |+
 |The Academy of the Seven / The Arena of the One
@@ -34,8 +33,3 @@ Following table shows all the changing stats and abilities of Crimson Scion Igni
 
 ## Notes
 ### Game
-* Stats in infobox are based upon an encounter at Citadel Sorrow Beach on Classic Difficulty in Definitive Edition of the game.
-
-### Development
-* Crimson Scion Ignis is notably similar to Edmund from *Divinity: Dragon Commander*, sharing similar personalities, character arc, and even the same voice actor.
-* The original character description from EA was: "Unique among your own kind, you are a prince exiled from your Empire. This land is hostile, its inhabitants inferior, but no one will stop your march to vindication."

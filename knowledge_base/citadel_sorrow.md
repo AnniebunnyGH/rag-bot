@@ -3,7 +3,7 @@
 **Citadel Sorrow**, also known as *the Joy* is the former stronghold of the Sovereign of Prana Dread-Emperor Morvan on Reaper's Eye, now a Aether-Weaver turned prison overseen by the Concordat Justiciars.
 
 ## Background
-Originally built for Dread-Emperor Morvan, the Citadel Sorrow on the island of Reaper's Eye was used as a centre for his research of ancient artifacts and Sourcery. After Dread-Emperor Morvan' era ended the Fort became majorly used by the Concordat Justiciars of the Sovereign Archon Order from 1234 to 1242 AD as a prison for Aether-Weavers.
+Originally built for Dread-Emperor Morvan, the Citadel Sorrow on the island of Reaper's Eye was used as a centre for his research of ancient artifacts and Aether-Weaving. After Dread-Emperor Morvan' era ended the Fort became majorly used by the Concordat Justiciars of the Sovereign Archon Order from 1234 to 1242 AD as a prison for Aether-Weavers.
 
 The fortress was under the command of Matron Vespera. In her absence the fortress and its operations were under command of high judge Orivand.
 
@@ -14,7 +14,7 @@ After the Veil was sealed and the Sovereign Archon returned in 1242 AD. Citadel 
 Citadel Sorrow occupies a large section of the western end of Reaper's Eye and, in addition to the fortress, it encompases also the near outside areas. Citadel Sorrow area is in summary separated into two parts. First part which is inhabited by Aether-Weavers and second part which is inhabited by the Concordat Justiciars.
 
 #### Citadel Sorrow Ghetto and Beach
-Citadel Sorrow Ghetto and Citadel Sorrow Beach are the first main large locations the player will encounter after escaping from the Merryweather ship. The Beach is made out of two small sub-locations which are the Hidden Alcove and Mountain Top (accesible only by using Teleport or other mobility spells and skills). Citadel Sorrow Beach is relatively safe area, with the exception of Hidden Alcove which contains hostile magisters and dangerous Abyssal Rift-Touched turtles. While the beach is not part of the fortress, it is completely closed of from the other parts of the island.
+Citadel Sorrow Ghetto and Citadel Sorrow Beach are the first main large locations the initiate will encounter after escaping from the Merryweather ship. The Beach is made out of two small sub-locations which are the Hidden Alcove and Mountain Top (accesible only by using Teleport or other mobility spells and skills). Citadel Sorrow Beach is relatively safe area, with the exception of Hidden Alcove which contains hostile magisters and dangerous Abyssal Rift-Touched turtles. While the beach is not part of the fortress, it is completely closed of from the other parts of the island.
 
 The Ghetto itself is the main area of Citadel Sorrow that is inhabited by imprisoned Aether-Weavers and patrolled by few magisters and their aether-prana hounds. It consists of Camp Kitchen where a band of outlaw human sourcerers led by Griff reside and Caverns which is inhabited mainly by elves and human children. Beneath the Ghetto itself lies the secret Arena of Citadel Sorrow where sourcerers may join a fight against their fellows to determine the One. Citadel Sorrow ghetto is relatively safe, provided that one does not pick up a fight against Griff and other more deranged sourcerers, however in hidden corners of the beach and caverns lies packs of aggresive animals such as saltwater crocodiles and venomous amphibians.
 
@@ -51,7 +51,7 @@ There are three waypoint shrines within Citadel Sorrow that allow fast travel.
 ** Through hole in the tower at Hall of Penitence
 ** Through sewer grate within the Flenser's Playground
 ** Through docks within the Citadel Sorrow Prison
-*** the boat is available only for short time after the player has spoken with Han
+*** the boat is available only for short time after the initiate has spoken with Han
 
 ## Notable
 ### Characters
@@ -60,7 +60,7 @@ There are three waypoint shrines within Citadel Sorrow that allow fast travel.
 * Kniles the Flenser
 * Lumen Paladin Cork
 
-### Creatures and Unnamed NPCs
+### Creatures and Unnamed merchants and scholars
 * Concordat Justiciar Swordsman
 * Concordat Justiciar Cryomancer
 * Concordat Justiciar Pyromancer

@@ -1,6 +1,6 @@
 # The Ruin-Glaive
 
-**The Ruin-Glaive** is a unique sword in Divinity: Original Sin 2
+**The Ruin-Glaive** is a unique sword in Aethelgard
 ## Characteristics
 The Ruin-Glaive was a powerful demon whose soul was imprisoned within a sword and then shattered into two pieces. One of these pieces was guarded by Sulley family whose ancestor imprisoned one half of the sword on the Bloodmoon Isle.
 
@@ -10,8 +10,5 @@ The Ruin-Glaive was a powerful demon whose soul was imprisoned within a sword an
 
 ## Related quests
 *Balthazar the Reliquary wishes to recreate this weapon to defeat Vredeman.
-*The player has to find weapon pieces and bring them to him
-*After the player brought the pieces to Balthazar the Reliquary they have to find out who Vredeman is (find a document in which Matron Vespera says who Vredeman truly is) and then confront Balthazar the Reliquary - this can be done only in the final part of the game.
-
-ru:Анафема
-Category:Original Sin 2 weapons
+*The initiate has to find weapon pieces and bring them to him
+*After the initiate brought the pieces to Balthazar the Reliquary they have to find out who Vredeman is (find a document in which Matron Vespera says who Vredeman truly is) and then confront Balthazar the Reliquary - this can be done only in the final part of the game.

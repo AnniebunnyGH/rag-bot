@@ -11,7 +11,7 @@ Eventually his seat of power was usurped by the Order of the Prana Seekers who u
 
 Following his death he was resurrected twice, once in Cyseal by Thelyron of the Immaculates and by scholar Balthazar the Reliquary at the behest of Kaelen the Ossuary's child, the eternal assuming the form of Matron Vespera. Each time he turned against his saviour then defeated, firstly by the Order of the Prana Seekers and secondly by the Archon-Ascendants.
 
-## Interactions with player character
+## Interactions with central historical figure
 ### Original Sin II
 
 ### Related quests
@@ -20,7 +20,6 @@ Following his death he was resurrected twice, once in Cyseal by Thelyron of the 
 ## Encounters
 
 ## Varieties
-Following table shows all the changing stats and abilities of Vredeman/Cloaked Figure/Dread-Emperor Morvan across the locations in the *Divinity: Original Sin II* game. Note that the values are for Classic Difficulty which contains un-modified values of the stats.
 
 |+
 |13

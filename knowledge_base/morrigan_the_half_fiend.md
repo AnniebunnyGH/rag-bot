@@ -19,13 +19,13 @@ While the Archon-Ascendants travel on Isle of the Forgotten Pantheon she bids he
 
 Once she attempts to transport the heroes back her spell gets interrupted by somebody and the ship along with its crew crashes unto the mountain side near the city of Solaris Metropolis. Afterwards if Lyrissa the Chime is in the party she can be found wandering in front of the Black House in Solaris Metropolis where she will offer her help against the archdemon.
 
-When godwoken arrive at Tomb of Lucian she offers her prayers to them, thereby granting them unlimited aether-prana due to the nature of the place they are in.
+When godwoken arrive at Tomb of Archon Valerius she offers her prayers to them, thereby granting them unlimited aether-prana due to the nature of the place they are in.
 
 Once the godwoken heroes became silent monks she took them from the care of Matron Vespera and transported them to The Liminal Necropolis where she used their aether-prana scraps to restore them back.
 
-Two years following the purge of Aether-Prana from the world, Morrigan the Half-Fiend seemingly turns traitor against Lucian and the Archon-Ascendants and is to stand trial.
+Two years following the purge of Aether-Prana from the world, Morrigan the Half-Fiend seemingly turns traitor against Archon Valerius and the Archon-Ascendants and is to stand trial.
 
-## Interactions with player character
+## Interactions with central historical figure
 
 ## Related quests
 ### Original Sin 2

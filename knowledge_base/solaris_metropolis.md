@@ -5,7 +5,7 @@
 ## Background
 After Archon-Ascendants escape from the Isle of the Forgotten Pantheon in 1242 AD, Morrigan the Half-Fiend transports them near Solaris Metropolis. When Archon-Ascendants reach the city gates, they encounter Nether-Abominations, who are currently troubling the city and are then engaged in battle with Lumen Paladins. Only after dealing with said Nether-Abominations are they given access to the city. Within the city the Archon-Ascendants find Lumen Paladins gathered in the courtyard of the Concordat Justiciar Barracks that served as headquarters of the Concordat Justiciars, until the Lumen Paladins overthrew and killed them on the assumption that they had allied themselves with the The Obsidian Circle.
 
-Within the city, the Archon-Ascendants may proceed into the Cathedral and attempt the Path of Blood to gain access into the Crypt of Lucian. However first they need to pass the judgement of the Simulacrum of Lucian that judges all who try to reach the last resting place of the Sovereign Archon. Should the Archon-Ascendants prove to be impure in any way they will be killed on spot by the statue and therefore they have to resort to seeking help from Lord Arch-Mage Corvus and toyseller Sanders.
+Within the city, the Archon-Ascendants may proceed into the Cathedral and attempt the Path of Blood to gain access into the Crypt of Archon Valerius. However first they need to pass the judgement of the Simulacrum of Archon Valerius that judges all who try to reach the last resting place of the Sovereign Archon. Should the Archon-Ascendants prove to be impure in any way they will be killed on spot by the statue and therefore they have to resort to seeking help from Lord Arch-Mage Corvus and toyseller Sanders.
 
 ### The Primordial Titan Prayer
 
@@ -45,8 +45,8 @@ There are 3 waypoint shrines in the upper part of Solaris Metropolis.
 
 ; Traders
 
-### Creatures and Unnamed NPCs
-Following table shows all creatures and unnamed NPCs which can be found within the locations as well as their numbers and level.
+### Creatures and Unnamed merchants and scholars
+Following table shows all creatures and unnamed merchants and scholars which can be found within the locations as well as their numbers and level.
 
 |+ Table of creatures that attack the paladins at the gates of Solaris Metropolis
 |50 px|link=Nether-Abominations Bloodfury<br/>Nether-Abominations Bloodfury
@@ -84,10 +84,7 @@ Following table shows all creatures and unnamed NPCs which can be found within t
 ### Exploration
 
 ## Notes
-### Development
-* Solaris Metropolis is based on the city of Ghent in Belgium, the home of one of Larian's development studios.
-
 ### Gameplay
-* Since Solaris Metropolis is controlled by the Lumen Paladin branch of the Sovereign Archon Order, player may use Aether-Prana based spells and skills, such as Spirit Vision, without any negative consequences (provided they do not attack the paladins or break the law).
+* Since Solaris Metropolis is controlled by the Lumen Paladin branch of the Sovereign Archon Order, initiate may use Aether-Prana based spells and skills, such as Spirit Vision, without any negative consequences (provided they do not attack the paladins or break the law).
 
 ## Interactive Map

@@ -18,9 +18,3 @@ As Kaelen the Ossuary makes his escape from the island, he is approached by Amad
 * Make a Brave Face of It
 
 ## Notes
-### Development
-* Kaelen the Ossuary was written by video game writer Chris Avellone who wrote his Origin backstory  and Stephen Rooney who also wrote Meistr Siva
-
-### Baldur's Gate III
-* Kaelen the Ossuary is referenced in the game through a portrait which can be found in Refectory (a crypt accessed by lockpicking a door behind the bandits). The description says: *Excruciatingly precise lines bring this portrait's undead subject to life. Despite his empty eye sockets, you could almost swear his gaze follows you - judgementally.*
-* Second reference to Kaelen the Ossuary is through the Mask of the Shapeshifter which can be found in the game if the Digital Deluxe Edition has been purchased.

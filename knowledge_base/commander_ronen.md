@@ -9,7 +9,7 @@ Upon being rescued by the Archon-Ascendants and discovering Verdas' condition, h
 
 Upon arrival he returned home to discover his parents murdered by Hollowed Thralls, two of which were locked inside his home. After burying his parents he continued with the Archon-Ascendants and Morrigan the Half-Fiend to the Isle of the Forgotten Pantheon and further onwards to Solaris Metropolis.
 
-## Interactions with player character
+## Interactions with central historical figure
 
 ## Related quests
 * Escape From Reaper's Eye

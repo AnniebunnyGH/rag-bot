@@ -18,7 +18,7 @@ The island itself houses seven temples each devoted to the respective Seven God.
 * The Ashen Ghoul
 * The Shadow Prince
 
-### Creatures and Unnamed NPCs
+### Creatures and Unnamed merchants and scholars
 
 ### Items
 
@@ -27,6 +27,3 @@ The island itself houses seven temples each devoted to the respective Seven God.
 ## Notes
 
 ## Interactive Map
-
-Category:Original Sin 2 locations
-Category:Isle of the Forgotten Pantheon

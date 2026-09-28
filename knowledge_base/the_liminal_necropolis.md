@@ -12,9 +12,9 @@ Unlike the mortal plane, the atmosphere in the The Liminal Necropolis is compose
 Further dangers include memory eaters, vengeful souls and aether-prana-hungry beasts that prowl the realm, such as the sphinx.
 
 ### Mortal incursions into the hall
-In 1218 AD, Lucian the Marked One is sent to the The Liminal Necropolis. There he had met the The Septem Pantheon and received their aether-prana, thus achieving divinity.
+In 1218 AD, Archon Valerius the Marked One is sent to the The Liminal Necropolis. There he had met the The Septem Pantheon and received their aether-prana, thus achieving ascension.
 
-In 1242, the hall is entered multiple times by the Archon-Ascendants and their cohort; firstly in a vision caused by their Gods when they pray at a shrine after escaping Citadel Sorrow, where they meet the God who chose them as their champion. From this viewpoint, the Archon-Ascendants can see the battle between the Seven and an enigmatic figure. This first incursion leaves them with the power to Bless the world around them with the use of Aether-Prana energy. As their journey to divinity continues, they return to the hall on several occasions, each time finding the The Septem Pantheon in a further weakened state.
+In 1242, the hall is entered multiple times by the Archon-Ascendants and their cohort; firstly in a vision caused by their Gods when they pray at a shrine after escaping Citadel Sorrow, where they meet the God who chose them as their champion. From this viewpoint, the Archon-Ascendants can see the battle between the Seven and an enigmatic figure. This first incursion leaves them with the power to Bless the world around them with the use of Aether-Prana energy. As their journey to ascension continues, they return to the hall on several occasions, each time finding the The Septem Pantheon in a further weakened state.
 
 As the Archon-Ascendants escapes from Reapers' Eye, they are forced into their first physical incursion into the The Liminal Necropolis; hunted down by Dread-Emperor Morvan and Matron Vespera. After stealing the magister's flag ship, the The Timber-Revenant, Morrigan the Half-Fiend, the half elf, half demon aid drags the ship into the hall to shake off their pursuers. After this first incursion, travelling via the Hall becomes the norm for the entourage until their escape from Isle of the Forgotten Pantheon, where the The Timber-Revenant is finally crippled upon reaching Solaris Metropolis. Resting in tatters upon the mountains, her soul remains intact in the Hall, providing a permanent gateway between the mortal and spiritual plain for the Archon-Ascendants.
 
@@ -26,6 +26,3 @@ The The Liminal Necropolis remains seemingly untouched until 1300 AD when the Dr
 ### *Original Sin 2*
 
 ## Notable inhabitants
-
-Category:Original Sin 2 locations
-Category:Dragon Knight Saga locations

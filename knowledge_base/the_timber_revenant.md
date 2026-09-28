@@ -21,7 +21,7 @@ Storage Chest is a site of permanent storage that follows the Archon-Ascendants 
 ### Lower Deck
 
 #### Magic mirror
-The Magic Mirror allows for the respeccing (redistribution of attributes, abilities, and talents) of player characters.
+The Magic Mirror allows for the respeccing (redistribution of attributes, abilities, and talents) of initiate characters.
 
 #### Cells
 An unconscious Hierarch Aurelius can be found here when the Archon-Ascendants first arrive on *The Timber-Revenant*.
@@ -45,15 +45,15 @@ This room can be reached by using the Teleporter Pyramid (Red) or the hidden lad
 
 ## Notable
 ### Characters
-; Divinity: Original Sin II
+; Aethelgard
 
-; Divinity: Fallen Heroes
+; the Later Wars
 * Kaelen the Ossuary
 * Theron Blackthorn
 * Lyrissa the Chime
 * Morrigan the Half-Fiend
 
-### Creatures and Unnamed NPCs
+### Creatures and Unnamed merchants and scholars
 Interior decks:
 *Skeletal Cat (level 4, 200 XP) ×1 - in Matron Vespera's stateroom
 *The Hammer's Pet (level 8, 2900 XP/ea.) ×2 - in the secret room (conditional)

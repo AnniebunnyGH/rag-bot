@@ -82,6 +82,5 @@ Following table shows all possible items which can be found in the corpse of the
 ** 200 experience for killing 1 silent monk
 
 ## Notes
-* All NPC information and date (unless specified) are from Classic Difficulty which contains the base values of damage, health and armour numbers.
 * Stats in infobox are for "elven" Hollowed Thrall found within Citadel Sorrow Prison.
 * Another varieties of Hollowed Thralls include: Agitated Hollowed Thrall, Silent Watcher and Weaponised Monk.
