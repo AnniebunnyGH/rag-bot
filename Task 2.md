@@ -6,6 +6,9 @@
 
 Для построения изолированной базы знаний, исключающей возможность «угадывания» ответов моделью из предобученных весов (zero prior knowledge), выбрана вселенная культовой ролевой игры **Divinity: Original Sin 2** (разработчик Larian Studios).
 
+### Источник данных:
+Статьи выгружены напрямую из официальной энциклопедии **[divinity.fandom.com](https://divinity.fandom.com/)** через **MediaWiki API** с помощью автоматического пайплайна `src/fetch_and_build_kb.py`.
+
 ### Почему именно эта вселенная:
 1. **Глубокий лор и разветвлённая система связей:** Включает в себя фундаментальные законы магии, противостояние богов и древней расы, межфракционные конфликты, персонажей с уникальными предысториями и детализированные локации.
 2. **Идеальная аналогия с корпоративной базой знаний:**
@@ -16,34 +19,56 @@
 
 ---
 
-## 2. Структура и состав базы знаний
+## 2. Пайплайн сбора и очистки данных (`src/fetch_and_build_kb.py`)
 
-Сформировано **37 уникальных сущностей** (в формате Markdown), разбитых на 6 тематических категорий:
-
-| Категория | Количество документов | Примеры сущностей |
-| :--- | :---: | :--- |
-| **Персонажи** | 16 | Lucian the Divine, Dallis the Hammer, Alexandar, Malady, Fane, Lohse, Ifan, Sebille, Red Prince, Beast, Tarquin, Gareth, Braccus Rex, Adramahlihk, Lord Kemm, Arhu |
-| **Концепции магии и мира** | 4 | Source & Sourcerers, The Void & Voidwoken, Godwoken, Silent Monks & Purging |
-| **Артефакты и материи** | 4 | Source Collar, Deathfog, Lady Vengeance, Anathema |
-| **Способности** | 1 | Source Vampirism |
-| **Фракции и культы** | 5 | Divine Order, Paladins, The Black Ring, The Seekers, The Lone Wolves |
-| **Локации** | 5 | Fort Joy, Reaper's Coast & Driftwood, Bloodmoon Island, Nameless Isle, Arx |
-| **Исторические события** | 2 | Purge of the Elves, Council of Seven |
-| **ИТОГО:** | **37** | **Полное покрытие ключевого лора** |
-
-Каждая статья оформлена по принципу: *один файл — одна сущность*, с четкими разделами, фактами, характеристиками и взаимосвязями с другими субъектами мира.
+1. **Выгрузка через API:** Скрипт обращается к эндпоинту `https://divinity.fandom.com/api.php?action=parse&prop=wikitext&format=json` и скачивает полный wikitext для 39 ключевых сущностей.
+2. **Глубокая очистка разметки:**
+   - Удаление HTML-комментариев, сносок `<ref>...</ref>` и галерей `<gallery>`.
+   - Рекурсивная очистка шаблонов инфобоксов `{{infobox...}}` и навигационных плашек.
+   - Конвертация уровней заголовков `== H2 ==` $\rightarrow$ `## H2`, `=== H3 ==` $\rightarrow$ `### H3`.
+   - Нормализация внутренних ссылок `[[Статья|Отображение]]` $\rightarrow$ `Отображение`, `[[Статья]]` $\rightarrow$ `Статья`.
+   - Удаление внешних ссылок и служебных разделов (References, Navigation, Gallery).
+3. **Сохранение сырых данных:** Все очищенные оригиналы сохранены в папке `data/raw/` (39 документов).
+4. **Обфускация:** Применение словаря замен `terms_map.json` за один проход regex с границами слов `\b...\b`.
+5. **Сохранение базы:** Итоговые статьи с полностью переименованными именами сохранены в `knowledge_base/`.
 
 ---
 
-## 3. Логика подмены терминов и словарь соответствий (`terms_map.json`)
+## 3. Структура и статистика базы знаний
 
-Для обфускации разработан скрипт `src/prepare_kb.py`.  
-Алгоритм подмены гарантирует целостность текста:
-- Словарь содержит **90 пар замен**.
-- Замены выполняются **по убыванию длины ключей** (от длинных фраз к коротким), чтобы избежать ложных частичных замен (например, замена `Source Collar` происходит раньше, чем замена одиночного слова `Source`).
-- Применяются регулярные выражения с границами слов (`\b...\b`), сохраняющие падежи и пунктуацию.
+Сформировано **42 детализированных Markdown-документа** в `knowledge_base/`:
+- **Суммарный объём:** **22 320 слов** ($\approx 29 000$ токенов).
+- **Средний объём документа:** **572 слова** на статью.
+- **Крупнейшие статьи:**
+  * `archon_valerius.md` (Lucian) — **3 180 слов**
+  * `the_inquisitorial_concordat.md` (Divine Order) — **1 502 слова**
+  * `citadel_sorrow.md` (Fort Joy) — **1 235 слов**
+  * `gallow_shore.md` (Reaper's Coast) — **1 201 слово**
+  * `the_obsidian_circle.md` (Black Ring) — **1 153 слова**
+  * `the_septem_pantheon.md` (The Seven Gods) — **910 слов**
+  * `theron_blackthorn.md` (Ifan) — **896 слов**
+  * `hierarch_aurelius.md` (Alexandar) — **819 слов**
+  * `arch_mage_corvus.md` (Arhu) — **780 слов**
+  * `nether_abominations.md` (Voidwoken) — **748 слов**
+  * `kaelen_the_ossuary.md` (Fane) — **626 слов**
 
-### Ключевые соответствия в `terms_map.json`:
+| Категория | Количество документов | Примеры сущностей |
+| :--- | :---: | :--- |
+| **Персонажи** | 17 | Lucian the Divine, Dallis, Alexandar, Malady, Fane, Lohse, Ifan, Sebille, Red Prince, Beast, Tarquin, Gareth, Braccus Rex, Adramahlihk, Lord Kemm, Arhu |
+| **Концепции магии и мира** | 6 | Source, Sourcerers, The Void, Voidwoken, Godwoken, Silent Monks |
+| **Артефакты и материи** | 5 | Source Collar, Deathfog, Lady Vengeance, Anathema, Swornbreaker |
+| **Способности** | 1 | Source Vampirism |
+| **Фракции и культы** | 6 | Divine Order, The Magisters, Paladins, The Black Ring, The Seekers, The Lone Wolves |
+| **Локации** | 5 | Fort Joy, Reaper's Coast, Bloodmoon Island, Nameless Isle, Arx |
+| **События и миры** | 2 | Purge of the Elves, Council of Seven |
+| **ИТОГО:** | **42** | **Полноценная, глубокая база знаний** |
+
+---
+
+## 4. Логика подмены терминов (`terms_map.json`)
+
+Словарь `terms_map.json` содержит **97 пар соответствий**.  
+Замена выполняется за один проход скомпилированного регулярного выражения с альтернацией (`|`) по ключам, отсортированным по убыванию длины:
 
 ```json
 {
@@ -66,39 +91,39 @@
   "Lohse": "Lyrissa the Chime",
   "Ifan ben-Mezd": "Theron Blackthorn",
   "Sebille": "Nyx the Scarred Needle",
-  "Red Prince": "Crimson Scion Ignis",
+  "The Red Prince": "Crimson Scion Ignis",
   "Beast": "Torgar Ironbeard",
   "Tarquin": "Balthazar the Reliquary",
   "Braccus Rex": "Dread-Emperor Morvan",
   "Adramahlihk": "Lord Malphas",
   "The Doctor": "The Crimson Chirurgeon",
+  "Linder Kemm": "Marshal Victor Vane",
   "Divine Order": "The Inquisitorial Concordat",
-  "Magisters": "Concordat Justiciars",
+  "The Magisters": "Concordat Justiciars",
   "Paladins of the Divine Order": "Lumen Paladins",
   "The Black Ring": "The Obsidian Circle",
-  "Seekers": "The Emancipators",
-  "Lone Wolves": "The Ironfang Syndicate",
+  "The Seekers": "The Emancipators",
+  "The Lone Wolves": "The Ironfang Syndicate",
   "Deathfog": "Necro-Miasma",
-  "Lady Vengeance": "The Timber-Revenant",
+  "The Lady Vengeance": "The Timber-Revenant",
   "Anathema": "The Ruin-Glaive",
-  "Source Collar": "Dampener Shackle",
+  "Source Collar": "Dampener Shackles",
   "Source Vampirism": "Prana-Siphoning",
   "Fort Joy": "Citadel Sorrow",
   "Reaper's Coast": "Gallow Shore",
   "Driftwood": "Mistport",
   "Bloodmoon Island": "Sanguine-Eclipse Atoll",
-  "Nameless Isle": "Isle of the Forgotten Pantheon",
-  "Arx": "Solaris Metropolis",
-  "Purge of the Elves": "The Ash-Blight Holocaust",
-  "Council of Seven": "The Conclave of Ascension"
+  "The Nameless Isle": "Isle of the Forgotten Pantheon",
+  "Arx": "Solaris Metropolis"
 }
 ```
 
 ---
 
-## 4. Результат выполнения
+## 5. Итоги Задания 2
 
-1. **Директория `knowledge_base/`:** Создано **37 чистых Markdown-файлов** (`*.md`), при этом **имена самих файлов также полностью переименованы** в соответствии с вымышленными названиями (например, `kaelen_the_ossuary.md` вместо Fane, `archon_valerius.md` вместо Lucian, `necro_miasma.md` вместо Deathfog). Это гарантирует, что метаданные источника (`source`) также не раскрывают исходных имен.
-2. **Скрипт генерации `src/prepare_kb.py`:** Автоматизирует очистку, подмену терминов за один проход regex и сохранение данных. Позволяет воспроизвести процесс одной командой `python src/prepare_kb.py`.
-3. **Словарь `terms_map.json`:** Содержит полный маппинг исходных сущностей на синтетические.
-4. **Невозможность угадывания:** Любой вопрос, сформулированный по терминам созданной базы (например: *«Какое оружие способно пробить божественный щит Archon Valerius?»* или *«Кто возглавляет The Emancipators на острове Citadel Sorrow?»*), модель LLM не сможет ответить без обращения к векторизованному контексту RAG.
+1. **Сырые данные (`data/raw/`):** 39 оригинальных страниц из `divinity.fandom.com`, очищенных от HTML и разметки.
+2. **Синтетическая база (`knowledge_base/`):** 42 больших, глубоких документа Markdown (22 320 слов), полностью переименованных в соответствии с миром Aethelgard.
+3. **Словарь (`terms_map.json`):** 97 пар терминов.
+4. **Скрипт (`src/fetch_and_build_kb.py`):** Воспроизводимый пайплайн автоматической выгрузки и преобразования.
+5. **Готовность к чанкингу:** Благодаря объёму в 22k слов документы будут разделены на сотни полноценных чанков, что обеспечит реалистичную и честную проверку качества семантического поиска в Задании 3.

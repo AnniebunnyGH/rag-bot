@@ -166,21 +166,21 @@ pip install langchain langchain-community faiss-cpu sentence-transformers openai
 ### Задание 2. Подготовка синтетической базы знаний
 **Цель:** Исключить использование предобученной памяти LLM («zero prior knowledge») для объективной валидации RAG.
 
-- [x] **2.1. Выбор домена:** Вселенная **Divinity: Original Sin 2** (Larian Studios) $\rightarrow$ синтетический мир **Aethelgard** (37 сущностей).
-- [x] **2.2. Парсинг и очистка:** структурированные связные тексты Markdown по принципу: *один файл — одна сущность*.
+- [x] **2.1. Выбор домена:** Вселенная **Divinity: Original Sin 2** (Larian Studios) $\rightarrow$ синтетический мир **Aethelgard** (выгружено напрямую из `divinity.fandom.com`).
+- [x] **2.2. Парсинг и очистка:** автоматизированная выгрузка через MediaWiki API (`src/fetch_and_build_kb.py`), очистка от шаблонов и сохранение оригиналов в `data/raw/`.
 - [x] **2.3. Обфускация сущностей:**
-  - Составлен словарь замен (`terms_map.json` на 90 терминов):
+  - Составлен словарь замен (`terms_map.json` на 97 терминов):
     * *Lucian the Divine* $\rightarrow$ *Archon Valerius*
     * *Source* $\rightarrow$ *Aether-Prana*
     * *Deathfog* $\rightarrow$ *Necro-Miasma*
     * *Dallis the Hammer* $\rightarrow$ *Matron Vespera the Cleaver*
-  - Разработан скрипт безопасной пакетной замены (`src/prepare_kb.py`).
-- [x] **2.4. Сохранение базы:** директория `knowledge_base/` с **37 файлами `.md`** + `terms_map.json`.
+  - Разработан скрипт безопасной однопроходной подмены терминов.
+- [x] **2.4. Сохранение базы:** директория `knowledge_base/` с **42 подробными файлами `.md`** (общий объём **22 320 слов**, $\approx 29 000$ токенов).
 
 > **Результат:** 
-> - Папка `knowledge_base/` (37 уникальных документов);
-> - Словарь `terms_map.json` и скрипт генерации `src/prepare_kb.py`;
-> - Тексты логичны и связны, но полностью защищены от угадывания LLM по памяти;
+> - Папка `knowledge_base/` (42 глубоких документа) + `data/raw/` (39 оригинальных страниц);
+> - Словарь `terms_map.json` и скрипт генерации `src/fetch_and_build_kb.py`;
+> - Тексты содержат реальный лор, квесты и механику, но полностью защищены от угадывания LLM по памяти;
 > - Подробный отчёт в [Task 2.md](Task%202.md).
 
 ---

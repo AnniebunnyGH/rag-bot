@@ -1,7 +1,14 @@
-# Dampener Shackles: Anti-Weaver Restraints
+# Dampener Shackle
 
-## Engineering and Metallurgy
-Dampener Shackles are heavy metallic torque rings forged from cursed iron and resonance-deadening minerals. Locked around the neck of suspected Aether-Weavers, they suppress all neurological connection to Aether-Prana.
+The **Dampener Shackle** is a piece of armour in *Divinity: Original Sin 2*.
 
-## Shock Mechanism
-Attempting to channel spellcraft while wearing a Dampener Shackle triggers an agonizing electrostatic feedback loop directly into the wearer's carotid arteries, inducing paralysis and preventing any magical manifestation.
+## Characteristics
+Designed by the Aether-Weaver King Dread-Emperor Morvan, the Aether-Prana collar fits to the neck of a Aether-Weaver to prevent the use of Sourcery by the wearer. It cannot be removed by conventional means, however, there are a few individuals that know the technique outside the Sovereign Archon Order.
+
+## Locations
+Worn by the Archon-Ascendants, their companions and other Aether-Weaver's bound for and on Reaper's Eye.
+
+## Related Quests
+Hot Under The Collar - Since the beginning of the story, the Archon-Ascendants is collared and removing the aether-prana collar is the only way to unlock the use of the Aether-Prana. Finding a way to remove it is the main goal of the quest
+
+Category:Original Sin 2 accessories

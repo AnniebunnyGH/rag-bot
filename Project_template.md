@@ -106,15 +106,16 @@
 ## Задание 2. Подготовка базы знаний
 
 - **Выбранная предметная область (вселенная):** Вселенная **Divinity: Original Sin 2** (Larian Studios), трансформированная в синтетический мир **Aethelgard**.
-- **Количество обработанных страниц/сущностей:** **37 сущностей** (персонажи, артефакты, концепции магии, фракции, локации, исторические события).
+- **Источник и количество страниц:** Выгружено напрямую из официальной **[divinity.fandom.com](https://divinity.fandom.com/)** через MediaWiki API. Сформировано **42 подробных Markdown-документа** общим объёмом **22 320 слов** ($\approx 29 000$ токенов). Сырые очищенные оригиналы сохранены в `data/raw/`.
 - **Принцип очистки и разбиения:**
-  - Каждый документ оформлен в формате Markdown (`*.md`) по принципу: *один файл — одна сущность*.
-  - Статьи очищены от разметки wiki, содержат структурированные разделы (`Overview`, `Specifications`, `Historical Significance`), факты, числа, цитаты и явные перекрёстные связи между сущностями.
-  - Генерация и обфускация автоматизированы через скрипт `src/prepare_kb.py`.
-- **Словарь замен (`terms_map.json`):** Всего 90 пар терминов. Замена выполняется от длинных словосочетаний к коротким с соблюдением границ слов (`\b...\b`).
+  - Автоматизированный пайплайн (`src/fetch_and_build_kb.py`).
+  - Очистка от шаблонов `{{infobox}}`, сносок `<ref>`, галерей, внешних ссылок и навигации.
+  - Конвертация заголовков в markdown (`##`, `###`), сохранение детальных биографий, квестов, локаций и цитат.
+  - Имена файлов полностью переименованы в соответствии с вымышленными названиями (например, `kaelen_the_ossuary.md` вместо Fane, `archon_valerius.md` вместо Lucian).
+- **Словарь замен (`terms_map.json`):** Всего 97 пар терминов. Однопроходная регулярная подстановка с соблюдением границ слов (`\b...\b`).
   * *Пример 1 (Персонажи):* `"Lucian the Divine"` $\rightarrow$ `"Archon Valerius"`, `"Dallis the Hammer"` $\rightarrow$ `"Matron Vespera the Cleaver"`, `"Fane"` $\rightarrow$ `"Kaelen the Ossuary"`.
   * *Пример 2 (Магия и концепты):* `"Source"` $\rightarrow$ `"Aether-Prana"`, `"Sourcerers"` $\rightarrow$ `"Aether-Weavers"`, `"The Void"` $\rightarrow$ `"The Abyssal Rift"`, `"Voidwoken"` $\rightarrow$ `"Nether-Abominations"`.
-  * *Пример 3 (Артефакты и институты):* `"Deathfog"` $\rightarrow$ `"Necro-Miasma"`, `"Source Collar"` $\rightarrow$ `"Dampener Shackle"`, `"Divine Order"` $\rightarrow$ `"The Inquisitorial Concordat"`, `"Fort Joy"` $\rightarrow$ `"Citadel Sorrow"`.
+  * *Пример 3 (Артефакты и институты):* `"Deathfog"` $\rightarrow$ `"Necro-Miasma"`, `"Source Collar"` $\rightarrow$ `"Dampener Shackles"`, `"Divine Order"` $\rightarrow$ `"The Inquisitorial Concordat"`, `"Fort Joy"` $\rightarrow$ `"Citadel Sorrow"`.
 - **Пояснение (почему гарантируется отсутствие ответов «по памяти» у LLM):**  
   Все ключевые имена собственные, топонимы, названия технологий и культов полностью заменены на уникальные неологизмы, отсутствующие в обучающих корпусах LLM (The Pile, Common Crawl, Wikipedia). Модель не способна ассоциировать вопросы про *"Necro-Miasma"* или *"Archon Valerius"* с оригинальным лором Divinity и не сможет сгенерировать правильный ответ без обращения к найденным чанкам векторного индекса. Подробный отчёт представлен в [Task 2.md](file:///c:/Users/kosty/Desktop/yandex%20courses/rag-bot/Task%202.md).
 

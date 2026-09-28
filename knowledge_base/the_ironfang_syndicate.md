@@ -1,7 +1,8 @@
-# The Ironfang Syndicate: Blood for Gold
+# The Ironfang Syndicate
 
-## Code of the Contract
-The Ironfang Syndicate is the premier criminal mercenary syndicate in Aethelgard. Operating under the brutal guidance of Kragor the Beastmaster from a fortified sawmill in Gallow Shore, their members live by the creed: 'A wolf without a pack is a killer without a master.'
+**The Ironfang Syndicate** are an organization of mercenaries in Aethelgard, they also have sub-groups that perform specific tasks or jobs.
 
-## High-Profile Bounties
-The Syndicate accepted an astronomical gold contract from the Obsidian Circle to systematically liquidate all potential Archon-Ascendants before they could reach the Isle of the Forgotten Pantheon.
+## The Silver Claw
+The Silver Claw is a smaller group within the organization of the The Ironfang Syndicate, they appear to deal with things such as assassinations. The only knowledge we currently have is from Theron's contract and his statements.
+
+Category:Original Sin 2 factions

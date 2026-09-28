@@ -1,10 +1,26 @@
-# Kaelen the Ossuary: The Entombed Scholar
+# Kaelen the Ossuary
 
-## The Primordial Past
-Kaelen the Ossuary was a pre-eminent natural philosopher among the Primordial Titans millennia before recorded history. His unquenchable curiosity led to the discovery of the Veil separating reality from the Abyssal Rift, as well as the latent power of pure Aether-Prana.
+**Kaelen the Ossuary** is an Primordial Titan scholar who evaded being thrust into the Abyssal Rift by the The Septem Pantheon.
 
-## Betrayal and Millennial Imprisonment
-When the greedy tribal lords who would become the Septem Pantheon stole his research, they banished Kaelen's entire civilization into the freezing darkness of the Abyssal Rift and sealed Kaelen inside an enchanted stone sarcophagus beneath the earth.
+## Background
+During the reign of the The Primordial Titans before the rise of the gods, Kaelen the Ossuary was a scholar, working in The Primordial Titan Academy, which was a second home to him.  His pursuit of knowledge resulted in his discovery of the Veil - a barrier of pure Aether-Prana, that later turned out to separate Aethelgard from the Abyssal Rift.  Despite preaching about the significance of his find and the progress its further study might bring to the people, the Primordial Titan King ordered him to halt any research on the Veil. In spite of this, Kaelen the Ossuary decided to inform the Seven lords of his discovery, hoping their intercession would help to sway the King's ruling, and thus allow him to continue his research. This, however, in King's eyes was nothing short of  treason. Once Kaelen the Ossuary's disobedience was found out, he was arrested and put on a trial, which sentenced him to an eternity in a Traitor's Tomb.
 
-## The Shapeshifter Mask
-Awakening in modern Aethelgard as a living skeleton, Kaelen constructed the *Mask of the Shapeshifter* using fresh cadaverous flesh. This artifact allows him to walk unrecognized among mortals while searching for the remnants of his lost wife and daughter.
+The Seven, with Kaelen the Ossuary's research in hand, started an insurrection against the King, that evolved into a full-out civil war that ended with the Seven dethroning the King and casting him into the Abyssal Rift alongside the rest of the The Primordial Titans.  Sometime at the start of the war, Kaelen the Ossuary's family was also purged and separately imprisoned for his crimes.  The entombing saved Kaelen the Ossuary, his daughter and wife, and other sealed away The Primordial Titans from being cast into the Abyssal Rift.
+
+He is first encountered on the *Merryweather* under the guise of an elf, however when Windego breaks free of her Aether-Prana collar and unleashes the Nether-Abominations on the ship she steals his mask, rendering his skeletal form visible to others. Upon landing on Reapers' Eye, he investigates the corpses of those who have recently died within Hidden Alcove north of Citadel Sorrow, looking to see if there is a way to detach the face from the body and craft a new mask; he may further the end of being able to use faces for his purposes if he meets Kniles, a surgeon with a twisted taste for torture, he then discovers a device known as a face ripper which can cleanly remove a face from a body. With this device and Aether-Prana orbs Kaelen the Ossuary is finally able to craft masks to disguise this undead form, however as he travels out to the Hollow Marshes, he may come face to face with Windego and defeat her for his mask.
+
+As Kaelen the Ossuary makes his escape from the island, he is approached by Amadia to be her Archon-Ascendants champion and for the second time, assists the The Septem Pantheon into defeating the Primordial Titan race, who have now become Nether-Abominations.
+
+## Interactions
+
+## Related Quests
+* A Scholar from Times Past
+* Make a Brave Face of It
+
+## Notes
+### Development
+* Kaelen the Ossuary was written by video game writer Chris Avellone who wrote his Origin backstory  and Stephen Rooney who also wrote Meistr Siva
+
+### Baldur's Gate III
+* Kaelen the Ossuary is referenced in the game through a portrait which can be found in Refectory (a crypt accessed by lockpicking a door behind the bandits). The description says: *Excruciatingly precise lines bring this portrait's undead subject to life. Despite his empty eye sockets, you could almost swear his gaze follows you - judgementally.*
+* Second reference to Kaelen the Ossuary is through the Mask of the Shapeshifter which can be found in the game if the Digital Deluxe Edition has been purchased.

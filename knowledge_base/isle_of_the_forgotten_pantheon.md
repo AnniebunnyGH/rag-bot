@@ -1,7 +1,32 @@
-# Isle of the Forgotten Pantheon: Sacred Convergence
+# Isle of the Forgotten Pantheon
 
-## Geography of the Septem Temples
-The Isle of the Forgotten Pantheon is a volcanic, shifting landmass containing seven monumental temples, each dedicated to one of the deities of the Septem Pantheon.
+**Isle of the Forgotten Pantheon** is an island on Aethelgard to the north of Gallow Shore and the location of the former Academy run by the The Primordial Titans.
 
-## The Wellspring of Ascension
-Deep inside the heart of the island's central volcano lies the Council Chamber. Here, the raw, unfiltered prana of the universe collects in a glowing lake, awaiting the arrival of the rightful Archon-Ascendant.
+## Background
+The centre of academia in the era of the The Primordial Titans, the isle has now fallen to the wilderness and the buildings in disrepair, with most of the temples being now nothing more than ruins either due to passage of time or The Obsidian Circle invasion.
+
+The island itself houses seven temples each devoted to the respective Seven God. In the heart of the island near the volcano lies the Lunar gate which serves as the main entrance to the Academy.
+
+## Layout
+### Sub locations
+
+### Waypoint shrines
+
+## Notable
+### Characters
+* Aurelius
+* The Ashen Ghoul
+* The Shadow Prince
+
+### Creatures and Unnamed NPCs
+
+### Items
+
+## Experience
+
+## Notes
+
+## Interactive Map
+
+Category:Original Sin 2 locations
+Category:Isle of the Forgotten Pantheon

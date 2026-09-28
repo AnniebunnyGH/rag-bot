@@ -1,10 +1,60 @@
-# Matron Vespera the Cleaver: High Justiciar of the Concordat
+# Matron Vespera
 
-## Public Authority and Brutality
-Matron Vespera assumed de facto supreme leadership of the Inquisitorial Concordat following the supposed martyrdom of Archon Valerius. Clad in heavy dragon-carved silver plate and wielding a colossal warhammer, she enacted draconian edicts rounding up all registered Aether-Weavers across the provinces.
+**Matron Vespera the Cleaver** is a white magister general of Lucian's The Inquisitorial Concordat. She, alongside Lucian, is credited for saving Aethelgard from the void in 1242 AD.
 
-## True Identity: The Primordial Titan
-Unbeknownst to her legions, Vespera was not human; she was one of the last surviving Primordial Titans, awakened from millennial slumber. Utilizing advanced shapeshifting masks and an ancient intellect, she allied with Valerius to eradicate the parasite gods of the Septem Pantheon.
+## Background
+A long-standing white magister, Matron Vespera was known for her kindness and incredible strategic mind. However, at some time prior to 1242 AD, the original Matron Vespera entered a crypt and was slain by the daughter of Kaelen the Ossuary, who then used Matron Vespera' face to make a shape-shifting mask. In the form of Matron Vespera, she joined Lucian and exposed the true origins of the The Septem Pantheon. Together, they made a plan to purge the world of aether-prana. Following the replacement, her behaviour noticeably changed, with her close friends lamenting her change.
 
-## Creation of Hollowed Thralls
-Vespera engineered the Essence-Excision process using specialized Excision Scepters. By surgically stripping Aether-Prana from captured weavers, she transformed dangerous magical adepts into docile, unfeeling Hollowed Thralls, neutralizing the beacon that summoned Nether-Abominations.
+To achieve this goal, Matron Vespera uncovered the Aether-Prana collars and purging wands on Reaper's Eye, and ordered Aether-Weavers from across Aethelgard to be transported to Citadel Sorrow, where they would be 'cured' of Aether-Prana. She also had the captured necromancer, Balthazar the Reliquary, resurrect Dread-Emperor Morvan (whom she disguised as Vredeman). Using Braccus as a 'aether-prana bloodhound', she uncovered the Aeteran from the The Tar-Trenches. In addition to this, she also learned how to transform into a dragon from him, a skill believed to only be known to the Dragon Knights.
+
+Matron Vespera had numerous clashes with the Archon-Ascendants while trying to enact this plan, however, she eventually was successful in using the Aeteran to drain the aether-prana wellspring and killing Aurelius. When the Archon-Ascendants reached Solaris Metropolis and learned the truth behind the Gods themselves, they surrendered their Aether-Prana. Matron Vespera and Lucian then used the Aeteran to mend the veil, stopping the voidwoken from reclaiming Aethelgard.
+
+## Interactions
+
+### Related quests
+* End Times
+* Hammerfall
+* Lady o' War
+
+## Encounters
+
+## Varieties
+Following table shows all the changing stats and abilities of Matron Vespera across the locations in the game. Note that the values are for Classic Difficulty which contains un-modified values of the stats.
+
+|+
+|8
+|269
+|164 / 194
+|
+|43
+|Strength 21<br/>Finesse 19<br/>Intelligence 24<br/>Constitution 24<br/>Memory 14<br/>Wits 13
+|Undead
+|Pyrokinetic 1<br/>Warfare 3<br/>Necromancer 4
+|Air + 40 %<br/>Fire + 20 %<br/>Water + 10 %<br/>Poison + 200 %
+|13
+|1096
+|706 / 838
+|257 - 267
+|
+|Strength 28<br/>Finesse 25<br/>Intelligence 33<br/>Constitution 33<br/>Memory 17<br/>Wits 15
+|Opportunist<br/>Undead
+|Pyrokinetic 1<br/>Warfare 5<br/>Necromancer 7
+|Air + 40 %<br/>Fire + 20 %<br/>Water + 10 %<br/>Poison + 200 %
+|20
+|6055
+|3707 / 4402
+|1256 - 1325
+|48
+|Strength 37<br/>Finesse 33<br/>Intelligence 45<br/>Constitution 45<br/>Memory 21<br/>Wits 18
+|Opportunist<br/>Undead
+|Pyrokinetic 2<br/>Warfare 8<br/>Necromancer 10
+|Air + 70 %<br/>Earth + 30 %<br/>Fire + 50 %<br/>Water + 40 %<br/>Poison + 200 %
+
+## Loot Table
+
+## Related Achievements
+**Hammered** - Force Matron Vespera to retreat from combat in Citadel Sorrow
+
+## Notes
+* Despite being a white magister, Matron Vespera is sometimes represented by the artwork of a red magister female.
+* In non-canonical endings of the game, Matron Vespera could be killed alongside Lucian and the rest of the white magisters.

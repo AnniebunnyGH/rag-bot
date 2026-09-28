@@ -1,7 +1,17 @@
-# The Ruin-Glaive: The Deicidal Blade
+# The Ruin-Glaive
 
-## Ancient Origin
-Forged during the primordial civil wars of the Titans, *The Ruin-Glaive* was engineered with a singularly horrific enchantment: to break through the divine shielding of ascended deities.
+**The Ruin-Glaive** is a unique sword in Divinity: Original Sin 2
+## Characteristics
+The Ruin-Glaive was a powerful demon whose soul was imprisoned within a sword and then shattered into two pieces. One of these pieces was guarded by Sulley family whose ancestor imprisoned one half of the sword on the Bloodmoon Isle.
 
-## Fragility and Assembly
-The weapon was shattered into two distinct segments hidden across Gallow Shore. Once re-forged by Balthazar the Reliquary, the weapon delivers apocalyptic damage capable of permanently sundering the physical shell of Archon Valerius, though the metal is so brittle it disintegrates after intense combat.
+## Location
+*One half lies in Bloodmoon Isle archives
+*the second half lies in Surrey tomb in The Barrow-Necropolis
+
+## Related quests
+*Balthazar the Reliquary wishes to recreate this weapon to defeat Vredeman.
+*The player has to find weapon pieces and bring them to him
+*After the player brought the pieces to Balthazar the Reliquary they have to find out who Vredeman is (find a document in which Matron Vespera says who Vredeman truly is) and then confront Balthazar the Reliquary - this can be done only in the final part of the game.
+
+ru:Анафема
+Category:Original Sin 2 weapons
