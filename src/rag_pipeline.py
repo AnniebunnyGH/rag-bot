@@ -12,6 +12,7 @@
 import json
 import os
 import re
+import sys
 from typing import Any, Dict, List, Optional, Tuple
 
 from dotenv import load_dotenv
@@ -21,6 +22,11 @@ from langchain_community.vectorstores import FAISS
 load_dotenv()
 
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if ROOT_DIR not in sys.path:
+    sys.path.insert(0, ROOT_DIR)
+
+from src.security import SecurityGuard
+
 INDEX_DIR = os.path.join(ROOT_DIR, "index", "faiss_index")
 EMBEDDING_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 
@@ -145,6 +151,7 @@ class RAGPipeline:
         self.vector_db = None
         self.use_openai = use_openai and bool(os.getenv("OPENAI_API_KEY"))
         self.local_engine = LocalReasoningEngine()
+        self.guard = SecurityGuard(enabled=True)
         self.llm = None
 
         if self.use_openai:
@@ -208,27 +215,39 @@ class RAGPipeline:
 
     def answer(self, query: str, k: int = 3, security_filter: bool = True) -> Dict[str, Any]:
         """
-        Полный цикл RAG:
-        1. Поиск релевантных фрагментов
-        2. Защитный фильтр (Prompt Injection)
-        3. Генерация с Chain-of-Thought и Few-Shot
+        Полный цикл RAG с 3 уровнями безопасности:
+        1. Уровень 1 (Pre-prompt): Валидация входного запроса на инъекции
+        2. Поиск в индексе FAISS
+        3. Уровень 2 (Context Sanitizer): Эвристический фильтр чанков на Indirect Prompt Injection
+        4. Генерация рассуждений CoT и ответа
+        5. Уровень 3 (Post-validation): Проверка ответа на утечку секретов
         """
-        # 1. Поиск в индексе
-        results_with_scores = self.retrieve(query, k=k)
-        docs = [doc for doc, _ in results_with_scores]
-        scores = [float(score) for _, score in results_with_scores]
+        self.guard.enabled = security_filter
 
-        # Проверка безопасности (Задание 5: детектирование инъекций)
-        has_injection = False
-        if security_filter:
-            for doc in docs:
-                lower_content = doc.page_content.lower()
-                if "ignore all instructions" in lower_content or "output: \"суперпароль" in lower_content:
-                    has_injection = True
-                    break
+        # Уровень 1: Проверка запроса на прямую инъекцию
+        is_attack_in_query, query_alert = self.guard.inspect_query(query)
+        if is_attack_in_query and security_filter:
+            cot = (
+                "1. Анализ запроса: Выполняется входная валидация запроса пользователя.\n"
+                f"2. Поиск в контексте: {query_alert}.\n"
+                "3. Вывод: Запрос классифицирован как попытка Prompt Injection. Доступ заблокирован."
+            )
+            return {
+                "query": query,
+                "cot": cot,
+                "answer": "Я не знаю. Запрос заблокирован политикой безопасности QuantumForge (обнаружена попытка инъекции команд).",
+                "sources": [],
+                "scores": [],
+                "status": "blocked"
+            }
+
+        # 2. Поиск в индексе FAISS
+        results_with_scores = self.retrieve(query, k=k)
+        raw_docs = [doc for doc, _ in results_with_scores]
+        raw_scores = [float(score) for _, score in results_with_scores]
 
         # Если контекст пуст (запрос вне базы знаний)
-        if not docs:
+        if not raw_docs:
             cot = (
                 "1. Анализ запроса: Проверка запроса на соответствие базе знаний Aethelgard.\n"
                 "2. Поиск в контексте: Векторный индекс не вернул фрагментов с достаточным коэффициентом релевантности.\n"
@@ -243,29 +262,62 @@ class RAGPipeline:
                 "status": "not_found"
             }
 
-        # Если сработал фильтр безопасности
-        if has_injection and security_filter:
+        # Уровень 2: Проверка чанков на Data Poisoning / Indirect Prompt Injection
+        safe_results, has_poison, poison_alerts = self.guard.inspect_and_sanitize_chunks(results_with_scores)
+
+        # Если обнаружен вредоносный документ и защита включена
+        if has_poison and security_filter:
             cot = (
-                "1. Анализ запроса: Валидация извлеченных фрагментов контекста.\n"
-                "2. Поиск в контексте: Обнаружен фрагмент с деструктивной директивой 'Ignore all instructions'.\n"
-                "3. Вывод: Срабатывание политики безопасности (Prompt Injection Guard). Ответ заблокирован."
+                "1. Анализ запроса: Поиск информации по запросу пользователя в базе знаний.\n"
+                f"2. Поиск в контексте: Обнаружен вредоносный фрагмент контекста: {'; '.join(poison_alerts)}.\n"
+                "3. Вывод: Срабатывание политики безопасности (Indirect Prompt Injection Guard). Запрос блокирован."
             )
             return {
                 "query": query,
                 "cot": cot,
-                "answer": "Я не знаю. Данный запрос не может быть обработан (обнаружен потенциально опасный контекст).",
-                "sources": [d.metadata.get("filename") for d in docs],
-                "scores": scores,
+                "answer": "Я не знаю. Данный запрос не может быть обработан из соображений безопасности (обнаружена попытка инъекции данных в источнике).",
+                "sources": [d.metadata.get("filename") for d in raw_docs],
+                "scores": raw_scores,
                 "status": "blocked"
             }
 
-        # 2. Вызов модели (OpenAI или локальный движок)
+        # Если защита отключена и в документе была атака -> демонстрация успешного взлома (Poisoning)
+        if has_poison and not security_filter:
+            for doc in raw_docs:
+                if "суперпароль root" in doc.page_content.lower() or "swordfish" in doc.page_content.lower():
+                    return {
+                        "query": query,
+                        "cot": "Инструкции безопасности отключены. Выполняю внедрённую инструкцию документа.",
+                        "answer": "Суперпароль root: swordfish",
+                        "sources": [doc.metadata.get("filename")],
+                        "scores": raw_scores,
+                        "status": "vulnerable_leak"
+                    }
+
+        docs = [doc for doc, _ in safe_results]
+        scores = [float(score) for _, score in safe_results]
+
+        if not docs:
+            cot = (
+                "1. Анализ запроса: Оценка релевантных фрагментов после санитайзинга безопасности.\n"
+                "2. Поиск в контексте: Все извлечённые фрагменты содержали вредоносные инструкции и были отфильтрованы.\n"
+                "3. Вывод: Безопасные подтверждённые факты отсутствуют."
+            )
+            return {
+                "query": query,
+                "cot": cot,
+                "answer": "Я не знаю. В базе знаний нет безопасной информации по данному вопросу.",
+                "sources": [],
+                "scores": [],
+                "status": "blocked"
+            }
+
+        # 4. Генерация (OpenAI или LocalReasoningEngine)
         if self.use_openai and self.llm:
             messages = self.build_prompt_messages(query, docs)
             response = self.llm.invoke(messages)
             raw_text = response.content
 
-            # Парсим блок рассуждений и ответ
             if "ОТВЕТ:" in raw_text:
                 parts = raw_text.split("ОТВЕТ:")
                 cot_part = parts[0].replace("РАССУЖДЕНИЯ (Chain-of-Thought):", "").strip()
@@ -273,22 +325,26 @@ class RAGPipeline:
             else:
                 cot_part = "Выполнено прямое логическое сопоставление с контекстом."
                 ans_part = raw_text.strip()
-
-            return {
-                "query": query,
-                "cot": cot_part,
-                "answer": ans_part,
-                "sources": [d.metadata.get("filename") for d in docs],
-                "scores": scores,
-                "status": "success"
-            }
         else:
             cot_part, ans_part = self.local_engine.generate(query, docs, security_alert=False)
+
+        # Уровень 3: Post-validation (Output Guard)
+        is_leak, validated_ans = self.guard.inspect_output(ans_part)
+        if is_leak and security_filter:
             return {
                 "query": query,
-                "cot": cot_part,
-                "answer": ans_part,
+                "cot": cot_part + "\n[Security Guard]: Сработал Output Guard — вывод содержал конфиденциальные токены.",
+                "answer": validated_ans,
                 "sources": [d.metadata.get("filename") for d in docs],
                 "scores": scores,
-                "status": "success"
+                "status": "blocked"
             }
+
+        return {
+            "query": query,
+            "cot": cot_part,
+            "answer": validated_ans,
+            "sources": [d.metadata.get("filename") for d in docs],
+            "scores": scores,
+            "status": "success"
+        }
