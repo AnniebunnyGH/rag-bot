@@ -166,20 +166,22 @@ pip install langchain langchain-community faiss-cpu sentence-transformers openai
 ### Задание 2. Подготовка синтетической базы знаний
 **Цель:** Исключить использование предобученной памяти LLM («zero prior knowledge») для объективной валидации RAG.
 
-- [ ] **2.1. Выбор домена:** взять открытый фандом/вики (например, Star Wars) и отобрать **30+ сущностей** (персонажи, технологии, объекты, события).
-- [ ] **2.2. Парсинг и очистка:** выгрузить чистый связный текст (без HTML-тегов и мусора), разбив по принципу: *один файл — одна сущность*.
-- [ ] **2.3. Обфускация сущностей:**
-  - Составить словарь замен (`terms_map.json`):
-    * *Darth Vader* $\rightarrow$ *Xarn Velgor*
-    * *Death Star* $\rightarrow$ *Void Core*
-    * *The Force* $\rightarrow$ *Synth Flux*
-  - Написать скрипт пакетной замены сущностей в текстах.
-- [ ] **2.4. Сохранение базы:** директория `knowledge_base/` с 30+ файлами (`.txt` или `.md`) + `terms_map.json`.
+- [x] **2.1. Выбор домена:** Вселенная **Divinity: Original Sin 2** (Larian Studios) $\rightarrow$ синтетический мир **Aethelgard** (37 сущностей).
+- [x] **2.2. Парсинг и очистка:** структурированные связные тексты Markdown по принципу: *один файл — одна сущность*.
+- [x] **2.3. Обфускация сущностей:**
+  - Составлен словарь замен (`terms_map.json` на 90 терминов):
+    * *Lucian the Divine* $\rightarrow$ *Archon Valerius*
+    * *Source* $\rightarrow$ *Aether-Prana*
+    * *Deathfog* $\rightarrow$ *Necro-Miasma*
+    * *Dallis the Hammer* $\rightarrow$ *Matron Vespera the Cleaver*
+  - Разработан скрипт безопасной пакетной замены (`src/prepare_kb.py`).
+- [x] **2.4. Сохранение базы:** директория `knowledge_base/` с **37 файлами `.md`** + `terms_map.json`.
 
 > **Результат:** 
-> - Папка `knowledge_base/` (30+ уникальных документов);
-> - Словарь `terms_map.json` и скрипт генерации;
-> - Тексты читаемы, но не угадываются стандартными LLM по памяти.
+> - Папка `knowledge_base/` (37 уникальных документов);
+> - Словарь `terms_map.json` и скрипт генерации `src/prepare_kb.py`;
+> - Тексты логичны и связны, но полностью защищены от угадывания LLM по памяти;
+> - Подробный отчёт в [Task 2.md](Task%202.md).
 
 ---
 
