@@ -123,11 +123,19 @@
 
 ## Задание 3. Создание векторного индекса базы знаний
 
-- **Выбранная модель эмбеддингов:** (Название, размерность векторов, ссылка)
-- **Стратегия чанкинга:** (Размер чанка, перекрытие, text splitter)
-- **Количество сгенерированных чанков:**
-- **Время генерации и индексации:**
+- **Выбранная модель эмбеддингов:** `sentence-transformers/all-MiniLM-L6-v2` (размерность 384 dim, cosine similarity via normalized embeddings, [Hugging Face репозиторий](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)).
+- **Стратегия чанкинга:** `RecursiveCharacterTextSplitter` с размером чанка **750 символов** ($\approx 120$ слов), перекрытием **150 символов** и разделителями `["\n## ", "\n### ", "\n\n", "\n", " ", ""]`. Для каждого чанка сохраняются метаданные: `filename`, `source`, `chunk_id`, `title`.
+- **Количество сгенерированных чанков:** **322 чанка** из 42 исходных документов базы знаний.
+- **Время генерации и индексации:** **15.83 секунд** (скорость 20.3 чанков/сек на обычном CPU).
+- **Векторное хранилище:** FAISS (`faiss-cpu`), сериализовано в директорию `index/faiss_index/` (`index.faiss` + `index.pkl`). Метаданные зафиксированы в `index/index_meta.json`.
 - **Пример тестового запроса к индексу и возвращённых чанков:**
+  * *Запрос:* `What is Necro-Miasma and why does it not affect undead like Kaelen the Ossuary?`
+  * *Время поиска:* **15.5 мс**
+  * *Найденный чанк 1 (Score 0.8165, necro_miasma.md):*  
+    `"# Necro-Miasma: Necro-Miasma is an extremely toxic substance that is capable of devastating organic life, and is heralded by some as 'the most lethal weapon of our time'..."`
+  * *Найденный чанк 2 (Score 0.9049, necro_miasma.md):*  
+    `"Regardless, the necro-miasma successfully dealt significant losses to The Obsidian Circle forces. The deaths of so many elves to the necro-miasma weakened the Seven God Tir-Cendelius..."`
+  * *Подробный отчёт и дополнительные тесты:* см. [Task 3.md](file:///c:/Users/kosty/Desktop/yandex%20courses/rag-bot/Task%203.md).
 
 ---
 
