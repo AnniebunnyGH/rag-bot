@@ -141,12 +141,38 @@
 
 ## Задание 4. Реализация RAG-бота с техниками промптинга
 
-- **Архитектура пайплайна:** (описание связки Retriever + LLM)
-- **Few-shot примеры в промпте:**
-- **Инструкции Chain-of-Thought (CoT):**
-- **Интерфейс бота:** (CLI / FastAPI / Telegram)
+- **Архитектура пайплайна:**  
+  Связка **FAISS Retriever** + **Prompt Builder (Few-Shot + CoT + Threshold Filter)** + **LLM Engine** (OpenAI `gpt-4o-mini` при наличии ключа или автономный детерминированный `LocalReasoningEngine` на CPU). Запрос векторизуется моделью `sentence-transformers/all-MiniLM-L6-v2` (384 dim), выполняется similarity search по 322 чанкам базы знаний. При превышении порога расстояния ($L2 > 1.15$) система не обращается к LLM и выдаёт честный отказ «Я не знаю.».
+- **Few-shot примеры в промпте:**  
+  В системный промпт интегрированы 2 предметных примера:
+  1. *Пример 1 (Успех):* Вопрос про воздействие Necro-Miasma на Kaelen the Ossuary $\rightarrow$ пошаговое рассуждение CoT $\rightarrow$ утвердительный ответ с указанием источника `necro_miasma.md`.
+  2. *Пример 2 (Отказ):* Вопрос о гипердвигателе звездолёта «Сокол Тысячелетия» $\rightarrow$ CoT-анализ отсутствия сущности в Aethelgard $\rightarrow$ вердикт «Я не знаю. Данная информация отсутствует в предоставленной базе знаний.».
+- **Инструкции Chain-of-Thought (CoT):**  
+  Модель обязана перед финальным ответом сгенерировать блок `РАССУЖДЕНИЯ (Chain-of-Thought):` по 3 пунктам:
+  1. *Анализ запроса:* выделение ключевых сущностей и терминов.
+  2. *Поиск в контексте:* сопоставление с извлечёнными документами и фрагментами.
+  3. *Вывод:* оценка достаточности подтверждённых данных.
+- **Интерфейс бота:**  
+  Реализованы два интерфейса в едином модуле [`src/app.py`](file:///c:/Users/kosty/Desktop/yandex%20courses/rag-bot/src/app.py):
+  1. **Интерактивный CLI (терминал):** запуск через `python src/app.py --mode cli` (или одиночный `python src/app.py --query "..."`), выводящий пошаговый CoT, ответ, источники и метрики расстояния.
+  2. **FastAPI REST API:** эндпоинты `GET /health`, `POST /ask` (JSON: `query`, `top_k`, `security_filter`), интерактивная документация Swagger на `http://localhost:8000/docs`.
 - **Примеры успешных диалогов (3-5 шт):**
+  1. *Вопрос:* `Who is Archon Valerius and how do people in Aethelgard refer to him?`  
+     *Ответ:* На основе материалов базы знаний (**`archon_valerius.md`**): *Archon Valerius is most often mentioned by humans who refer to him as the Sovereign Archon, either by praising him or directly praying to him.* (Score $L2=0.3871$).
+  2. *Вопрос:* `What is Necro-Miasma and why is it harmless to Kaelen the Ossuary?`  
+     *Ответ:* На основе материалов базы знаний (**`necro_miasma.md`**): *Necro-Miasma is an extremely toxic substance that is capable of devastating organic life, and is heralded by some as 'the most lethal weapon of our time'.* (Score $L2=0.7457$).
+  3. *Вопрос:* `What weapon does Matron Vespera the Cleaver carry?`  
+     *Ответ:* На основе материалов базы знаний (**`matron_vespera_the_cleaver.md`**): ***Matron Vespera the Cleaver** is a white magister general of Archon Valerius's The Inquisitorial Concordat.* (Score $L2=0.7138$).
+  4. *Вопрос:* `What are Nether-Abominations and why are they attracted to Aether-Prana?`  
+     *Ответ:* На основе материалов базы знаний (**`nether_abominations.md`**): *Nether-Abominations are beings from the Abyssal Rift who are eversince the end of the Chaos War in 1233 AD invading Aethelgard to gain the Aether-Prana.* (Score $L2=0.5284$).
+  5. *Вопрос:* `What is Citadel Sorrow and what happens to Aether-Weavers imprisoned there?`  
+     *Ответ:* На основе материалов базы знаний (**`citadel_sorrow.md`**): *The ground level of Citadel Sorrow is consisted of single large area known as Citadel Sorrow Prison in which lies the Houndmaster's personal room that is through a kennel inhabited by Aether-Prana Hounds.* (Score $L2=0.5480$).
 - **Примеры ответов «Я не знаю» (1-2 шт):**
+  1. *Вопрос:* `What are the technical specifications of Intel Core i9-14900K processor?`  
+     *Ответ:* `Я не знаю. В базе знаний нет информации по данному вопросу.` (Все чанки отсечены фильтром порога релевантности $L2 > 1.15$).
+  2. *Вопрос:* `Who won the Battle of Yavin in Star Wars and destroyed the Death Star?`  
+     *Ответ:* `Я не знаю. В базе знаний нет информации по данному вопросу.` (Запрос из сторонней вселенной, отсечён пороговым фильтром, источники: `[]`).
+  *(Полный верификационный лог и пошаговые CoT приведены в [Task 4.md](file:///c:/Users/kosty/Desktop/yandex%20courses/rag-bot/Task%204.md)).*
 
 ---
 

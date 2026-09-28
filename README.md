@@ -204,24 +204,24 @@ pip install langchain langchain-community faiss-cpu sentence-transformers openai
 ### Задание 4. Реализация RAG-бота с техниками промптинга
 **Цель:** Создать пайплайн генерации с обоснованными ответами и минимизацией галлюцинаций.
 
-- [ ] **4.1. Core RAG Pipeline:**
-  - Приём вопроса $\rightarrow$ векторизация $\rightarrow$ Similarity Search в базе знаний $\rightarrow$ инъекция контекста в промпт $\rightarrow$ вызов LLM.
-- [ ] **4.2. Few-Shot Prompting:**
-  - Добавить в системный промпт 1–2 реальных примера ответов на основе вымышленной вселенной.
-- [ ] **4.3. Chain-of-Thought (CoT):**
+- [x] **4.1. Core RAG Pipeline:**
+  - Приём вопроса $\rightarrow$ векторизация $\rightarrow$ Similarity Search в базе знаний FAISS $\rightarrow$ отсечение нерелевантных ($L2 \le 1.15$) $\rightarrow$ инъекция контекста в промпт $\rightarrow$ вызов LLM.
+- [x] **4.2. Few-Shot Prompting:**
+  - В системный промпт интегрированы 2 предметных примера ответов по миру Aethelgard.
+- [x] **4.3. Chain-of-Thought (CoT):**
   - Инструктировать модель рассуждать по шагам перед выдачей финального ответа:
     ```text
     1. Идентифицирую ключевую сущность в вопросе.
     2. Извлекаю подтверждённый факт из контекста.
     3. Формулирую лаконичный вывод на основе факта.
     ```
-- [ ] **4.4. Интерфейс взаимодействия:**
-  - Реализовать CLI REPL, REST API (FastAPI) или Web UI.
-- [ ] **4.5. Тестирование:**
-  - Провести 3–5 успешных диалогов;
-  - Провести 1–2 теста на вопросы вне контекста (бот обязан строго сказать: *«Я не знаю»*).
+- [x] **4.4. Интерфейс взаимодействия:**
+  - Реализован терминальный CLI (интерактивный и single-query) и REST API на базе FastAPI (`/health`, `/ask`, Swagger UI) в [`src/app.py`](file:///c:/Users/kosty/Desktop/yandex%20courses/rag-bot/src/app.py).
+- [x] **4.5. Тестирование:**
+  - Проведено 5 успешных верифицированных диалогов;
+  - Проведено 2 теста на вопросы вне контекста (бот строго отвечает: *«Я не знаю»*).
 
-> **Результат:** Рабочий скрипт/модуль RAG-бота, поддерживающий Few-shot, CoT и обработку отсутствия контекста.
+> **Результат:** Рабочий модуль RAG-пайплайна ([`src/rag_pipeline.py`](file:///c:/Users/kosty/Desktop/yandex%20courses/rag-bot/src/rag_pipeline.py)) и интерфейса ([`src/app.py`](file:///c:/Users/kosty/Desktop/yandex%20courses/rag-bot/src/app.py)), поддерживающий Few-shot, CoT и обработку отсутствия контекста. Подробный отчёт: [Task 4.md](file:///c:/Users/kosty/Desktop/yandex%20courses/rag-bot/Task%204.md).
 
 ---
 
