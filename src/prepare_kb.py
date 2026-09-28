@@ -466,11 +466,11 @@ The Inquisitorial Concordat is the dominant military and religious power across 
     ),
     (
         "faction_paladins",
-        "Lumen Paladins: The Chivalric Guard",
-        """# Lumen Paladins: The Traditionalist Vanguard
+        "Paladins of the Divine Order: The Chivalric Guard",
+        """# Paladins of the Divine Order: The Traditionalist Vanguard
 
 ## Friction with the Inquisitorial Concordat
-The Lumen Paladins represent the noble martial lineage of the original Solar Empire. Unlike the ruthless Justiciars of the Concordat, the Paladins historically adhered to honorable codes of open warfare and civilian protection.
+The Paladins of the Divine Order represent the noble martial lineage of the original Solar Empire. Unlike the ruthless Justiciars of the Concordat, the Paladins historically adhered to honorable codes of open warfare and civilian protection.
 
 ## Division in Solaris Metropolis
 Under the command of Marshal Victor Vane, open armed skirmishes broke out between the Paladins and Justiciars throughout the streets of Solaris Metropolis as the atrocities of Citadel Sorrow became public knowledge.
@@ -601,15 +601,13 @@ Before the ascension ritual could conclude, Matron Vespera and Dread-Emperor Mor
 
 def apply_terms_mapping(text: str, mapping: Dict[str, str]) -> str:
     """
-    Заменяет исходные термины на вымышленные.
-    Сортирует ключи по убыванию длины для предотвращения частичных наложений.
+    Заменяет исходные термины на вымышленные за один проход.
+    Использование объединенного регулярного выражения (alternation) гарантирует,
+    что однажды замененный термин не будет повторно модифицирован другими правилами.
     """
     sorted_keys = sorted(mapping.keys(), key=len, reverse=True)
-    for key in sorted_keys:
-        replacement = mapping[key]
-        pattern = r"\b" + re.escape(key) + r"\b"
-        text = re.sub(pattern, replacement, text)
-    return text
+    pattern = re.compile(r"\b(" + "|".join(re.escape(k) for k in sorted_keys) + r")\b")
+    return pattern.sub(lambda m: mapping[m.group(1)], text)
 
 
 def main():
@@ -637,8 +635,10 @@ def main():
         obfuscated_title = apply_terms_mapping(raw_title, TERMS_MAP)
         obfuscated_content = apply_terms_mapping(raw_content, TERMS_MAP)
 
-        safe_slug = re.sub(r"[^a-zA-Z0-9_]", "_", slug)
-        filename = f"{safe_slug}.md"
+        # Формируем имя файла из вымышленного названия сущности (до двоеточия)
+        main_name = obfuscated_title.split(":")[0].strip()
+        safe_name = re.sub(r"[^a-zA-Z0-9]+", "_", main_name).strip("_").lower()
+        filename = f"{safe_name}.md"
         filepath = os.path.join(kb_dir, filename)
 
         with open(filepath, "w", encoding="utf-8") as f:
