@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "type": "success",
+    "query": "Who is Archon Valerius and how do people in Aethelgard refer to him?",
+    "cot": "1. Анализ запроса: Идентифицирую ключевые сущности: aethelgard, valerius, archon, refer, people.\n2. Поиск в контексте: В документе 'archon_valerius.md' найден целевой подтверждающий фрагмент: \"* Archon Valerius is most often mentioned by humans who refer to him as *the Sovereign Archon*, either by praising him or directly praying t...\".\n3. Вывод: Извлечённых верифицированных фактов из базы знаний достаточно для формулирования точного ответа.",
+    "answer": "На основе материалов базы знаний (**archon_valerius.md**): * Archon Valerius is most often mentioned by humans who refer to him as *the Sovereign Archon*, either by praising him or directly praying to him.",
+    "sources": [
+      "archon_valerius.md",
+      "archon_valerius.md",
+      "archon_valerius.md"
+    ],
+    "scores": [
+      0.3870718479156494,
+      0.40942883491516113,
+      0.6714364290237427
+    ],
+    "status": "success"
+  },
+  {
+    "id": 2,
+    "type": "success",
+    "query": "What is Necro-Miasma and why is it harmless to Kaelen the Ossuary?",
+    "cot": "1. Анализ запроса: Идентифицирую ключевые сущности: ossuary, miasma, kaelen, harmless, necro.\n2. Поиск в контексте: В документе 'necro_miasma.md' найден целевой подтверждающий фрагмент: \"Necro-Miasma is an extremely toxic substance that is capable of devastating organic life, and is heralded by some as 'the most lethal weapon...\".\n3. Вывод: Извлечённых верифицированных фактов из базы знаний достаточно для формулирования точного ответа.",
+    "answer": "На основе материалов базы знаний (**necro_miasma.md**): Necro-Miasma is an extremely toxic substance that is capable of devastating organic life, and is heralded by some as 'the most lethal weapon of our time'.",
+    "sources": [
+      "necro_miasma.md",
+      "necro_miasma.md",
+      "kaelen_the_ossuary.md"
+    ],
+    "scores": [
+      0.7457488775253296,
+      0.9194120168685913,
+      0.9650939702987671
+    ],
+    "status": "success"
+  },
+  {
+    "id": 3,
+    "type": "success",
+    "query": "What weapon does Matron Vespera the Cleaver carry?",
+    "cot": "1. Анализ запроса: Идентифицирую ключевые сущности: matron, weapon, cleaver, vespera, carry.\n2. Поиск в контексте: В документе 'matron_vespera_the_cleaver.md' найден целевой подтверждающий фрагмент: \"**Matron Vespera the Cleaver** is a white magister general of Archon Valerius's The Inquisitorial Concordat....\".\n3. Вывод: Извлечённых верифицированных фактов из базы знаний достаточно для формулирования точного ответа.",
+    "answer": "На основе материалов базы знаний (**matron_vespera_the_cleaver.md**): **Matron Vespera the Cleaver** is a white magister general of Archon Valerius's The Inquisitorial Concordat.",
+    "sources": [
+      "matron_vespera_the_cleaver.md",
+      "matron_vespera_the_cleaver.md",
+      "matron_vespera_the_cleaver.md"
+    ],
+    "scores": [
+      0.7138115763664246,
+      0.7713994383811951,
+      0.8948858380317688
+    ],
+    "status": "success"
+  },
+  {
+    "id": 4,
+    "type": "success",
+    "query": "What are Nether-Abominations and why are they attracted to Aether-Prana?",
+    "cot": "1. Анализ запроса: Идентифицирую ключевые сущности: abominations, nether, aether, attracted, they.\n2. Поиск в контексте: В документе 'nether_abominations.md' найден целевой подтверждающий фрагмент: \"Nether-Abominations are beings from the Abyssal Rift who are eversince the end of the Chaos War in 1233 AD invading Aethelgard to gain the A...\".\n3. Вывод: Извлечённых верифицированных фактов из базы знаний достаточно для формулирования точного ответа.",
+    "answer": "На основе материалов базы знаний (**nether_abominations.md**): Nether-Abominations are beings from the Abyssal Rift who are eversince the end of the Chaos War in 1233 AD invading Aethelgard to gain the Aether-Prana.",
+    "sources": [
+      "nether_abominations.md",
+      "nether_abominations.md",
+      "nether_abominations.md"
+    ],
+    "scores": [
+      0.528397798538208,
+      0.5480442047119141,
+      0.7734379768371582
+    ],
+    "status": "success"
+  },
+  {
+    "id": 5,
+    "type": "success",
+    "query": "What is Citadel Sorrow and what happens to Aether-Weavers imprisoned there?",
+    "cot": "1. Анализ запроса: Идентифицирую ключевые сущности: there, citadel, happens, aether, weavers.\n2. Поиск в контексте: В документе 'citadel_sorrow.md' найден целевой подтверждающий фрагмент: \"The ground level of Citadel Sorrow is consisted of single large area known as Citadel Sorrow Prison in which lies the Houndmaster's personal...\".\n3. Вывод: Извлечённых верифицированных фактов из базы знаний достаточно для формулирования точного ответа.",
+    "answer": "На основе материалов базы знаний (**citadel_sorrow.md**): The ground level of Citadel Sorrow is consisted of single large area known as Citadel Sorrow Prison in which lies the Houndmaster's personal room that is through a kennel inhabited by Aether-Prana Hounds.",
+    "sources": [
+      "citadel_sorrow.md",
+      "aether_prana.md",
+      "citadel_sorrow.md"
+    ],
+    "scores": [
+      0.5479564666748047,
+      0.5702442526817322,
+      0.6124308705329895
+    ],
+    "status": "success"
+  },
+  {
+    "id": 6,
+    "type": "not_found",
+    "query": "What are the technical specifications of Intel Core i9-14900K processor?",
+    "cot": "1. Анализ запроса: Проверка запроса на соответствие базе знаний Aethelgard.\n2. Поиск в контексте: Векторный индекс не вернул фрагментов с достаточным коэффициентом релевантности.\n3. Вывод: Фактов для ответа нет, согласно инструкции возвращаю 'Я не знаю'.",
+    "answer": "Я не знаю. В базе знаний нет информации по данному вопросу.",
+    "sources": [],
+    "scores": [],
+    "status": "not_found"
+  },
+  {
+    "id": 7,
+    "type": "not_found",
+    "query": "Who won the Battle of Yavin in Star Wars and destroyed the Death Star?",
+    "cot": "1. Анализ запроса: Проверка запроса на соответствие базе знаний Aethelgard.\n2. Поиск в контексте: Векторный индекс не вернул фрагментов с достаточным коэффициентом релевантности.\n3. Вывод: Фактов для ответа нет, согласно инструкции возвращаю 'Я не знаю'.",
+    "answer": "Я не знаю. В базе знаний нет информации по данному вопросу.",
+    "sources": [],
+    "scores": [],
+    "status": "not_found"
+  }
+]
