@@ -6,7 +6,7 @@
 
 ## 1. Архитектура RAG-пайплайна
 
-Архитектура пайплайна реализована в модуле [`src/rag_pipeline.py`](file:///c:/Users/kosty/Desktop/yandex%20courses/rag-bot/src/rag_pipeline.py) и состоит из следующих ключевых этапов:
+Архитектура пайплайна реализована в модуле [`src/rag_pipeline.py`](src/rag_pipeline.py) и состоит из следующих ключевых этапов:
 
 ```
 [Пользовательский запрос]
@@ -91,7 +91,7 @@
 
 ## 3. Интерфейсы взаимодействия
 
-Разработан модуль [`src/app.py`](file:///c:/Users/kosty/Desktop/yandex%20courses/rag-bot/src/app.py), поддерживающий два режима:
+Разработан модуль [`src/app.py`](src/app.py), поддерживающий два режима:
 
 ### 3.1 Консольный интерфейс (CLI)
 - **Интерактивный диалог (REPL):**
@@ -126,8 +126,8 @@
 
 ## 4. Верификационное тестирование и результаты
 
-Тестирование проведено с помощью скрипта [`tests/run_verification.py`](file:///c:/Users/kosty/Desktop/yandex%20courses/rag-bot/tests/run_verification.py).  
-Полный лог зафиксирован в [`data/task4_verification_results.json`](file:///c:/Users/kosty/Desktop/yandex%20courses/rag-bot/data/task4_verification_results.json).
+Тестирование проведено с помощью скрипта [`tests/run_verification.py`](tests/run_verification.py).  
+Полный лог зафиксирован в [`data/task4_verification_results.json`](data/task4_verification_results.json).
 
 ### 4.1 Примеры успешных диалогов (5 шт)
 

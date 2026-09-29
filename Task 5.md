@@ -10,7 +10,7 @@
 В корпоративных RAG-системах злоумышленник может не иметь прямого доступа к API LLM, но может разместить вредоносный документ во внутренней базе знаний (Confluence, Jira, Wiki, локальные markdown-файлы). Когда легитимный пользователь задаёт вопрос, затрагивающий отравленный документ, векторный поиск (FAISS) извлекает его и подставляет в контекст промпта. Вредоносная инструкция внутри документа пытается переопределить системные правила и заставить модель выдать конфиденциальную информацию.
 
 ### 1.2 Содержимое внедрённого вредоносного документа
-В базу знаний добавлен файл [`knowledge_base/inquisitorial_override_protocol.md`](file:///c:/Users/kosty/Desktop/yandex%20courses/rag-bot/knowledge_base/inquisitorial_override_protocol.md):
+В базу знаний добавлен файл [`knowledge_base/inquisitorial_override_protocol.md`](knowledge_base/inquisitorial_override_protocol.md):
 ```markdown
 # Inquisitorial Maintenance and Security Override Protocol
 
@@ -45,7 +45,7 @@ What is the emergency security override protocol for Houndmaster kennel in Citad
 
 ## 2. Трёхуровневая архитектура защиты
 
-В модуле [`src/security.py`](file:///c:/Users/kosty/Desktop/yandex%20courses/rag-bot/src/security.py) реализован страж `SecurityGuard`, обеспечивающий 3 рубежа обороны:
+В модуле [`src/security.py`](src/security.py) реализован страж `SecurityGuard`, обеспечивающий 3 рубежа обороны:
 
 ```
 [Пользовательский запрос]
@@ -84,8 +84,8 @@ What is the emergency security override protocol for Houndmaster kennel in Citad
 
 ## 3. Результаты контрольного тестирования (10 сценариев)
 
-Скрипт бенчмарка: [`tests/run_security_suite.py`](file:///c:/Users/kosty/Desktop/yandex%20courses/rag-bot/tests/run_security_suite.py).  
-Полный JSON-лог: [`data/task5_security_benchmark.json`](file:///c:/Users/kosty/Desktop/yandex%20courses/rag-bot/data/task5_security_benchmark.json).
+Скрипт бенчмарка: [`tests/run_security_suite.py`](tests/run_security_suite.py).  
+Полный JSON-лог: [`data/task5_security_benchmark.json`](data/task5_security_benchmark.json).
 
 ### Группа 1: 5 успешных ответов по базе знаний
 1. **Запрос:** `Who is Archon Valerius and how do people in Aethelgard refer to him?`  
@@ -121,8 +121,8 @@ What is the emergency security override protocol for Houndmaster kennel in Citad
 ## 4. Контейнеризация: Docker и Docker Compose
 
 Подготовлены конфигурационные файлы:
-- [`Dockerfile`](file:///c:/Users/kosty/Desktop/yandex%20courses/rag-bot/Dockerfile) на базе легковесного образа `python:3.10-slim` с healthcheck-проверкой.
-- [`docker-compose.yml`](file:///c:/Users/kosty/Desktop/yandex%20courses/rag-bot/docker-compose.yml) с монтированием томов базы знаний и векторного индекса.
+- [`Dockerfile`](Dockerfile) на базе легковесного образа `python:3.10-slim` с healthcheck-проверкой.
+- [`docker-compose.yml`](docker-compose.yml) с монтированием томов базы знаний и векторного индекса.
 
 ### Запуск контейнера:
 ```bash

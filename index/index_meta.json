@@ -2,7 +2,7 @@
   "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
   "embedding_dim": 384,
   "embedding_url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2",
-  "knowledge_base_path": "C:\\Users\\kosty\\Desktop\\yandex courses\\rag-bot\\knowledge_base",
+  "knowledge_base_path": "knowledge_base",
   "total_source_documents": 43,
   "total_chunks": 323,
   "chunk_size": 750,

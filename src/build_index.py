@@ -70,6 +70,7 @@ def split_documents(docs):
         source_path = chunk.metadata.get("source", "")
         filename = os.path.basename(source_path)
         chunk.metadata["filename"] = filename
+        chunk.metadata["source"] = f"knowledge_base/{filename}"
         chunk.metadata["chunk_id"] = f"{filename}_{idx}"
         
         # Извлекаем заголовок из первых строк документа
@@ -124,7 +125,7 @@ def build_and_save_index():
         "embedding_model": EMBEDDING_MODEL_NAME,
         "embedding_dim": EMBEDDING_DIM,
         "embedding_url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2",
-        "knowledge_base_path": KB_DIR,
+        "knowledge_base_path": os.path.relpath(KB_DIR, ROOT_DIR).replace("\\", "/"),
         "total_source_documents": len(docs),
         "total_chunks": len(chunks),
         "chunk_size": CHUNK_SIZE,

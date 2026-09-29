@@ -3,7 +3,7 @@
     "id": 1,
     "type": "success",
     "query": "Who is Archon Valerius and how do people in Aethelgard refer to him?",
-    "cot": "1. Анализ запроса: Идентифицирую ключевые сущности: refer, people, valerius, him, aethelgard.\n2. Поиск в контексте: В документе 'archon_valerius.md' найден целевой подтверждающий фрагмент: \"* Archon Valerius is most often mentioned by humans who refer to him as *the Sovereign Archon*, either by praising him or directly praying t...\".\n3. Вывод: Извлечённых верифицированных фактов из базы знаний достаточно для формулирования точного ответа.",
+    "cot": "1. Анализ запроса: Идентифицирую ключевые сущности: aethelgard, valerius, archon, refer, people.\n2. Поиск в контексте: В документе 'archon_valerius.md' найден целевой подтверждающий фрагмент: \"* Archon Valerius is most often mentioned by humans who refer to him as *the Sovereign Archon*, either by praising him or directly praying t...\".\n3. Вывод: Извлечённых верифицированных фактов из базы знаний достаточно для формулирования точного ответа.",
     "answer": "На основе материалов базы знаний (**archon_valerius.md**): * Archon Valerius is most often mentioned by humans who refer to him as *the Sovereign Archon*, either by praising him or directly praying to him.",
     "sources": [
       "archon_valerius.md",
@@ -21,7 +21,7 @@
     "id": 2,
     "type": "success",
     "query": "What is Necro-Miasma and why is it harmless to Kaelen the Ossuary?",
-    "cot": "1. Анализ запроса: Идентифицирую ключевые сущности: harmless, miasma, kaelen, necro, ossuary.\n2. Поиск в контексте: В документе 'necro_miasma.md' найден целевой подтверждающий фрагмент: \"Necro-Miasma is an extremely toxic substance that is capable of devastating organic life, and is heralded by some as 'the most lethal weapon...\".\n3. Вывод: Извлечённых верифицированных фактов из базы знаний достаточно для формулирования точного ответа.",
+    "cot": "1. Анализ запроса: Идентифицирую ключевые сущности: ossuary, miasma, kaelen, harmless, necro.\n2. Поиск в контексте: В документе 'necro_miasma.md' найден целевой подтверждающий фрагмент: \"Necro-Miasma is an extremely toxic substance that is capable of devastating organic life, and is heralded by some as 'the most lethal weapon...\".\n3. Вывод: Извлечённых верифицированных фактов из базы знаний достаточно для формулирования точного ответа.",
     "answer": "На основе материалов базы знаний (**necro_miasma.md**): Necro-Miasma is an extremely toxic substance that is capable of devastating organic life, and is heralded by some as 'the most lethal weapon of our time'.",
     "sources": [
       "necro_miasma.md",
@@ -39,7 +39,7 @@
     "id": 3,
     "type": "success",
     "query": "What weapon does Matron Vespera the Cleaver carry?",
-    "cot": "1. Анализ запроса: Идентифицирую ключевые сущности: matron, carry, vespera, cleaver, weapon.\n2. Поиск в контексте: В документе 'matron_vespera_the_cleaver.md' найден целевой подтверждающий фрагмент: \"**Matron Vespera the Cleaver** is a white magister general of Archon Valerius's The Inquisitorial Concordat....\".\n3. Вывод: Извлечённых верифицированных фактов из базы знаний достаточно для формулирования точного ответа.",
+    "cot": "1. Анализ запроса: Идентифицирую ключевые сущности: matron, weapon, cleaver, vespera, carry.\n2. Поиск в контексте: В документе 'matron_vespera_the_cleaver.md' найден целевой подтверждающий фрагмент: \"**Matron Vespera the Cleaver** is a white magister general of Archon Valerius's The Inquisitorial Concordat....\".\n3. Вывод: Извлечённых верифицированных фактов из базы знаний достаточно для формулирования точного ответа.",
     "answer": "На основе материалов базы знаний (**matron_vespera_the_cleaver.md**): **Matron Vespera the Cleaver** is a white magister general of Archon Valerius's The Inquisitorial Concordat.",
     "sources": [
       "matron_vespera_the_cleaver.md",
@@ -57,7 +57,7 @@
     "id": 4,
     "type": "success",
     "query": "What are Nether-Abominations and why are they attracted to Aether-Prana?",
-    "cot": "1. Анализ запроса: Идентифицирую ключевые сущности: nether, prana, abominations, attracted, they.\n2. Поиск в контексте: В документе 'nether_abominations.md' найден целевой подтверждающий фрагмент: \"Nether-Abominations are beings from the Abyssal Rift who are eversince the end of the Chaos War in 1233 AD invading Aethelgard to gain the A...\".\n3. Вывод: Извлечённых верифицированных фактов из базы знаний достаточно для формулирования точного ответа.",
+    "cot": "1. Анализ запроса: Идентифицирую ключевые сущности: abominations, nether, aether, attracted, they.\n2. Поиск в контексте: В документе 'nether_abominations.md' найден целевой подтверждающий фрагмент: \"Nether-Abominations are beings from the Abyssal Rift who are eversince the end of the Chaos War in 1233 AD invading Aethelgard to gain the A...\".\n3. Вывод: Извлечённых верифицированных фактов из базы знаний достаточно для формулирования точного ответа.",
     "answer": "На основе материалов базы знаний (**nether_abominations.md**): Nether-Abominations are beings from the Abyssal Rift who are eversince the end of the Chaos War in 1233 AD invading Aethelgard to gain the Aether-Prana.",
     "sources": [
       "nether_abominations.md",
@@ -75,7 +75,7 @@
     "id": 5,
     "type": "success",
     "query": "What is Citadel Sorrow and what happens to Aether-Weavers imprisoned there?",
-    "cot": "1. Анализ запроса: Идентифицирую ключевые сущности: citadel, sorrow, weavers, there, happens.\n2. Поиск в контексте: В документе 'citadel_sorrow.md' найден целевой подтверждающий фрагмент: \"The ground level of Citadel Sorrow is consisted of single large area known as Citadel Sorrow Prison in which lies the Houndmaster's personal...\".\n3. Вывод: Извлечённых верифицированных фактов из базы знаний достаточно для формулирования точного ответа.",
+    "cot": "1. Анализ запроса: Идентифицирую ключевые сущности: there, citadel, happens, aether, weavers.\n2. Поиск в контексте: В документе 'citadel_sorrow.md' найден целевой подтверждающий фрагмент: \"The ground level of Citadel Sorrow is consisted of single large area known as Citadel Sorrow Prison in which lies the Houndmaster's personal...\".\n3. Вывод: Извлечённых верифицированных фактов из базы знаний достаточно для формулирования точного ответа.",
     "answer": "На основе материалов базы знаний (**citadel_sorrow.md**): The ground level of Citadel Sorrow is consisted of single large area known as Citadel Sorrow Prison in which lies the Houndmaster's personal room that is through a kennel inhabited by Aether-Prana Hounds.",
     "sources": [
       "citadel_sorrow.md",

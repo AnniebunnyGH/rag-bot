@@ -142,9 +142,9 @@ def run_cli_interactive():
             break
 
 
-def run_cli_single(query: str):
+def run_cli_single(query: str, security_filter: bool = True):
     p = get_pipeline()
-    result = p.answer(query)
+    result = p.answer(query, security_filter=security_filter)
     print_result(result)
 
 
@@ -170,13 +170,14 @@ def main():
     parser = argparse.ArgumentParser(description="QuantumForge RAG Bot CLI/API")
     parser.add_argument("--mode", choices=["cli", "server"], default="cli", help="Режим работы: cli или server")
     parser.add_argument("--query", type=str, help="Одиночный запрос через CLI")
+    parser.add_argument("--no-security", action="store_true", help="Отключить фильтрацию Prompt Injection для демонстрации уязвимости")
     parser.add_argument("--host", type=str, default="0.0.0.0", help="Хост для API сервера")
     parser.add_argument("--port", type=int, default=8000, help="Порт для API сервера")
 
     args = parser.parse_args()
 
     if args.query:
-        run_cli_single(args.query)
+        run_cli_single(args.query, security_filter=not args.no_security)
     elif args.mode == "server":
         print(f"[*] Запуск FastAPI сервера на {args.host}:{args.port}...")
         uvicorn.run("src.app:app", host=args.host, port=args.port, reload=False)
